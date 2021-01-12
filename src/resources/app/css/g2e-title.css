@@ -1,0 +1,117 @@
+@charset "UTF-8";
+/*
+Copyright (c) 2021 Luna's Torture Room / るなてぃっく
+Released under the MIT license
+http://opensource.org/licenses/mit-license.php
+*/
+/*
+Copyright (c) 2021 Luna's Torture Room / るなてぃっく
+Released under the MIT license
+http://opensource.org/licenses/mit-license.php
+*/
+body { margin: 0px; padding: 0px; position: fixed; }
+
+#game-background-fix { background: url(../images/b009.png) no-repeat; }
+
+#bg-header { background: url(../images/ui_parts.png) no-repeat; background-position: 0px 0px; width: 1920px; height: 637px; position: absolute; top: 0px; left: 0px; -webkit-mask-image: linear-gradient(to right, black 0%, black 0%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%); -webkit-mask-repeat: no-repeat; -webkit-mask-position: 0 0; -webkit-mask-size: contain; }
+
+#bg-footer { background: url(../images/ui_parts.png) no-repeat; background-position: 0px -637px; width: 1920px; height: 560px; position: absolute; bottom: 0px; right: 0px; -webkit-mask-image: linear-gradient(to left, black 0%, black 0%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%); -webkit-mask-repeat: no-repeat; -webkit-mask-position: 0 0; -webkit-mask-size: contain; }
+
+.footer-reveal { opacity: 0.0; }
+
+#button-container { position: relative; background: linear-gradient(to right, rgba(124, 127, 149, 0.44) 0%, rgba(124, 127, 149, 0.16) 80%); width: 1920px; height: 94px; top: 358px; left: 0px; display: flex; flex-direction: row; justify-content: space-around; align-items: center; }
+
+#start-button { padding: 0px; margin: 0px; }
+
+#start-button a { background-image: url("../images/ui_parts.png"); background-repeat: no-repeat; background-position: -696px -1704px; width: 348px; height: 66px; display: block; }
+
+#start-button a:hover { background-image: url("../images/ui_parts.png"); background-repeat: no-repeat; background-position: -348px -1704px; width: 348px; height: 66px; display: block; }
+
+#start-button a:active { background-image: url("../images/ui_parts.png"); background-repeat: no-repeat; background-position: 0px -1704px; width: 348px; height: 66px; display: block; }
+
+.button_start { background: url("../images/ui_parts.png") no-repeat; background-position: -696px -1704px; width: 348px; height: 66px; outline: none; display: block; }
+
+.button_start_down { background-position: 0px -1704px; }
+
+.button_start_hover { background-position: -348px -1704px; }
+
+#config-button { padding: 0px; margin: 0px; }
+
+#config-button a { background-image: url("../images/ui_parts.png"); background-repeat: no-repeat; background-position: -1672px -1611px; width: 348px; height: 66px; display: block; }
+
+#config-button a:hover { background-image: url("../images/ui_parts.png"); background-repeat: no-repeat; background-position: -696px -1572px; width: 348px; height: 66px; display: block; }
+
+#config-button a:active { background-image: url("../images/ui_parts.png"); background-repeat: no-repeat; background-position: -348px -1572px; width: 348px; height: 66px; display: block; }
+
+.button_config { background: url("../images/ui_parts.png") no-repeat; background-position: -1672px -1611px; width: 348px; height: 66px; outline: none; display: block; }
+
+.button_config_down { background-position: -348px -1572px; }
+
+.button_config_hover { background-position: -696px -1572px; }
+
+#gallery-button { padding: 0px; margin: 0px; }
+
+#gallery-button a { background-image: url("../images/ui_parts.png"); background-repeat: no-repeat; background-position: 0px -1572px; width: 348px; height: 66px; display: block; }
+
+#gallery-button a:hover { background-image: url("../images/ui_parts.png"); background-repeat: no-repeat; background-position: -1672px -1545px; width: 348px; height: 66px; display: block; }
+
+#gallery-button a:active { background-image: url("../images/ui_parts.png"); background-repeat: no-repeat; background-position: -1392px -1743px; width: 348px; height: 66px; display: block; }
+
+.button_gallery { background: url("../images/ui_parts.png") no-repeat; background-position: 0px -1572px; width: 348px; height: 66px; outline: none; display: block; }
+
+.button_gallery_down { background-position: -1392px -1743px; }
+
+.button_gallery_hover { background-position: -1672px -1545px; }
+
+#message-container { opacity: 0; position: absolute; background: linear-gradient(to right, rgba(124, 127, 149, 0) 24%, rgba(124, 127, 149, 0.26) 50%, rgba(124, 127, 149, 0) 76%); width: 1920px; height: 50px; top: 300px; left: 0px; color: #EEEEEE; font-size: 26px; line-height: 50px; text-align: center; text-shadow: 4px 4px 4px #10101080, 2px  2px 2px #80808030, -2px  2px 2px #80808030, 2px -2px 2px #80808030, -2px -2px 2px #80808030, 2px  0px 2px #80808030, 0px  2px 2px #80808030, -2px  0px 2px #80808030, 0px -2px 2px #80808030; }
+
+.message-anim { animation-name: message_animkeys; animation-duration: 2.3s; animation-timing-function: ease; animation-delay: 0s; animation-iteration-count: 1; animation-direction: normal; animation-fill-mode: forwards; animation-play-state: running; }
+
+@keyframes message_animkeys { 20% { opacity: 1.0; }
+  80% { opacity: 1.0; }
+  100% { opacity: 0.0; } }
+#credit-button { padding: 0px; margin: 0px; }
+
+#credit-button a { background-image: url("../images/ui_parts.png"); background-repeat: no-repeat; background-position: -348px -1638px; width: 348px; height: 66px; display: block; }
+
+#credit-button a:hover { background-image: url("../images/ui_parts.png"); background-repeat: no-repeat; background-position: 0px -1638px; width: 348px; height: 66px; display: block; }
+
+#credit-button a:active { background-image: url("../images/ui_parts.png"); background-repeat: no-repeat; background-position: -1044px -1628px; width: 348px; height: 66px; display: block; }
+
+.button_credit { background: url("../images/ui_parts.png") no-repeat; background-position: -348px -1638px; width: 348px; height: 66px; outline: none; display: block; }
+
+.button_credit_down { background-position: -1044px -1628px; }
+
+.button_credit_hover { background-position: 0px -1638px; }
+
+#quit-button { padding: 0px; margin: 0px; }
+
+#quit-button a { background-image: url("../images/ui_parts.png"); background-repeat: no-repeat; background-position: -1044px -1694px; width: 348px; height: 66px; display: block; }
+
+#quit-button a:hover { background-image: url("../images/ui_parts.png"); background-repeat: no-repeat; background-position: -1392px -1677px; width: 348px; height: 66px; display: block; }
+
+#quit-button a:active { background-image: url("../images/ui_parts.png"); background-repeat: no-repeat; background-position: -696px -1638px; width: 348px; height: 66px; display: block; }
+
+.button_quit { background: url("../images/ui_parts.png") no-repeat; background-position: -1044px -1694px; width: 348px; height: 66px; outline: none; display: block; }
+
+.button_quit_down { background-position: -696px -1638px; }
+
+.button_quit_hover { background-position: -1392px -1677px; }
+
+#copyright-container { position: relative; background: linear-gradient(to right, rgba(124, 127, 149, 0) 24%, rgba(124, 127, 149, 0.26) 50%, rgba(124, 127, 149, 0) 76%); width: 1920px; height: 40px; top: 386px; left: 0px; display: flex; flex-direction: row; justify-content: space-around; align-items: center; }
+
+#copyright-label { background: url(../images/ui_parts.png) no-repeat; background-position: -1261px -1825px; width: 556px; height: 20px; }
+
+.side-button { position: absolute; background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.15) 30%, rgba(255, 255, 255, 0.15) 70%, rgba(255, 255, 255, 0) 100%); width: 110px; height: 30px; right: 0px; color: #EEEEEE; font-size: 20px; line-height: 30px; text-align: right; text-shadow: 4px 4px 4px #10101080, 2px  2px 2px #80808030, -2px  2px 2px #80808030, 2px -2px 2px #80808030, -2px -2px 2px #80808030, 2px  0px 2px #80808030, 0px  2px 2px #80808030, -2px  0px 2px #80808030, 0px -2px 2px #80808030; }
+
+.side-button span { margin-right: 18px; filter: blur(0.1px); }
+
+.side-button:hover { border-right: solid 5px blue; }
+
+#credit-container { top: 170px; }
+
+#license-container { top: 215px; }
+
+#version-container { position: relative; background: linear-gradient(to right, rgba(124, 127, 149, 0) 89%, rgba(124, 127, 149, 0.45) 100%); width: 1920px; height: 40px; top: 386px; left: 0px; display: flex; flex-direction: row; justify-content: flex-end; align-items: center; }
+
+#version-label { background: url(../images/ui_parts.png) no-repeat; background-position: -1392px -1628px; width: 238px; height: 42px; }

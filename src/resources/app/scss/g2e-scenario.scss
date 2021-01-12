@@ -1,0 +1,931 @@
+/*
+Copyright (c) 2021 Luna's Torture Room / るなてぃっく
+Released under the MIT license
+http://opensource.org/licenses/mit-license.php
+*/
+@import "../scss_values/ui-parts-values.scss";
+
+body {
+	margin : 0px;
+	padding: 0px;
+	position: fixed;
+}
+
+.game-canvas {
+    position: absolute;
+}
+
+.scntitle-container {
+
+	display: none;
+	position: absolute;
+	top: 10px;
+	right: 0px;
+	background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.15) 30%, rgba(255,255,255,0.15) 70%, rgba(255,255,255,0) 100%);
+
+	width: 650px;
+	height: 86px;
+	line-height: 86px;
+
+	z-index: 20;
+
+	color: #FFFFFF;
+	white-space: nowrap;
+	font-size: 50px;
+	text-align: center;
+	filter: blur(0.1px);
+	
+	text-shadow:
+	4px 4px 4px #10101080,
+	2px  2px 2px #80808030,
+	-2px  2px 2px #80808030,
+	 2px -2px 2px #80808030,
+	-2px -2px 2px #80808030,
+	 2px  0px 2px #80808030,
+	 0px  2px 2px #80808030,
+	-2px  0px 2px #80808030,
+	 0px -2px 2px #80808030;
+
+}
+
+.scntitle-anim {
+
+	display: block;
+	animation-name: scene_title_animkeys;
+	animation-duration: 2.8s;
+	animation-timing-function: ease;
+	animation-delay: 0s;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-fill-mode: forwards;
+	animation-play-state: running;
+
+};
+
+@keyframes scene_title_animkeys {
+	0% {
+		transform: translateX(-160px) scale(1.1);
+		filter: blur(10px);
+	}
+	25% {
+		transform: translateX(0px) scale(1.0);
+		filter: blur(0px);
+	}
+	75% {
+		transform: translateX(0px) scale(1.0);
+		filter: blur(0px);
+		opacity: 1.0;
+	}
+	100% {
+		transform: translateX(160px) scale(1.08);
+		filter: blur(4px);
+		opacity: 0.0;
+	}
+}
+
+.textscn_container {
+	// background-color: #0000FF00;
+	display: none;
+    width: 1362px;
+    height: 375px;
+    position: absolute;
+    top: 725px;
+    left: 240px;
+    // overflow: hidden;
+	padding: 0px;
+	margin : 0px;
+	// z-index: 5;
+	text-shadow:
+	2px 2px 6px #000000,
+	2px  2px 1px #303030,
+	-2px  2px 1px #303030,
+	 2px -2px 1px #303030,
+	-2px -2px 1px #303030,
+	 2px  0px 1px #303030,
+	 0px  2px 1px #303030,
+	-2px  0px 1px #303030,
+	 0px -2px 1px #303030;
+}
+
+.textscn_bg {
+    position: absolute;
+    background: url(../images/ui_parts.png) no-repeat;
+    background-position: $ui-cb001-position;
+    width: $ui-cb001-width;
+    height: $ui-cb001-height;
+    top: 0px;
+	left: 0px;
+	opacity: 0.25;
+}
+
+.textscn_name {
+	position: absolute;
+	width: 350px;
+	height: 50px;
+	top: 60px;
+	left: 76px;
+	font-size: 40px;
+	text-align: center;
+	color: white;
+}
+
+.textscn_text {
+	position: relative;
+	width:1140px;
+	height:240px;
+	top:130px;
+	left:110px;
+	font-size: 40px;
+	text-align: left;
+	// background-color: #FF000060;
+	line-height: 1.5;
+	color: white;
+	white-space: pre;
+}
+
+.textscn_anim_start_from {
+	// opacity: 0.0;
+	// transition: all 1000ms 0s ease;
+	animation-name: textscn_anim_start_keys;
+	animation-duration: 0.5s;
+	animation-timing-function: ease;
+	animation-delay: 0s;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-fill-mode: backwards;
+	animation-play-state: running;
+}
+
+// .textscn_anim_start_to {
+// 	opacity: 1.0;
+// }
+
+@keyframes textscn_anim_start_keys {
+	0% {
+		opacity: 0.0;
+		transform: translateY(200px) scale(0.01);
+	}
+	100% {
+		opacity: 1.0;
+		transform: translateY(0px) scale(1.0);
+	}
+}
+
+.textscn_anim_close_from {
+	animation-name: textscn_anim_close_keys;
+	animation-duration: 0.5s;
+	animation-timing-function: ease;
+	animation-delay: 0s;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-fill-mode: forwards;
+	animation-play-state: running;
+}
+
+@keyframes textscn_anim_close_keys {
+	0% {
+		opacity: 1.0;
+		transform: translateY(0px) scale(1.0);
+	}
+	100% {
+		opacity: 0.0;
+		transform: translateY(200px) scale(0.01);
+	}
+}
+
+.textscn_anim_shake1 {
+	// filter: blur(1px);
+	animation-name: textscn_anim_shake1_keys;
+	animation-duration: 0.1s;
+	animation-timing-function: linear;
+	animation-delay: 0s;
+	animation-iteration-count: 6;
+	animation-direction: normal;
+	animation-fill-mode: backwards;
+	animation-play-state: running;
+}
+
+@keyframes textscn_anim_shake1_keys {
+	0% {
+		transform: translate(0px, 0px) rotateZ(0deg);
+	}
+	20% {
+		transform: translate(60px, 20px) rotateZ(0.5deg);
+	}
+	40% {
+		transform: translate(-60px, 20px) rotateZ(0deg);
+	}
+	60% {
+		transform: translate(60px, 0px) rotateZ(-0.5deg);
+	}
+	80% {
+		transform: translate(0px, 20px) rotateZ(0deg);
+	}
+	100% {
+		transform: translate(0px, 0px) rotateZ(0deg);
+	}
+}
+
+.textscn_anim_shake2 {
+	// filter: blur(1px);
+	animation-name: textscn_anim_shake2_keys;
+	animation-duration: 0.12s;
+	animation-timing-function: linear;
+	animation-delay: 0s;
+	animation-iteration-count: 14;
+	animation-direction: normal;
+	animation-fill-mode: backwards;
+	animation-play-state: running;
+}
+
+@keyframes textscn_anim_shake2_keys {
+	0% {
+		transform: translate(0px, 0px) rotateZ(0deg);
+	}
+	20% {
+		transform: translate(50px, 20px) rotateZ(0.5deg);
+	}
+	40% {
+		transform: translate(-50px, 20px) rotateZ(0deg);
+	}
+	60% {
+		transform: translate(50px, 0px) rotateZ(-0.5deg);
+	}
+	80% {
+		transform: translate(0px, 20px) rotateZ(0deg);
+	}
+	100% {
+		transform: translate(0px, 0px) rotateZ(0deg);
+	}
+}
+
+// .textscn_text > div { // 縦センタリング
+// 	position: absolute;
+// 	top: 50%;
+// 	transform: translateY(-50%);
+// }
+
+.canvas_textscn {
+	position: absolute;
+	top:0px;
+	left:0px;
+}
+
+#game-controller-container {
+    background-color: #0000FF00;
+    width: 344px;
+    height: 248px;
+    position: absolute;
+    top: 820px;
+    left: 1560px;
+    overflow: visible;
+	padding: 0px;
+	margin : 0px;
+	z-index: 5;
+}
+
+#game-controller-svg {
+	position: absolute;
+	pointer-events: none;
+	z-index: 10;
+	mix-blend-mode: overlay;
+	filter: blur(1px);
+	animation-name: gc_button_high;
+	animation-duration: 0.8s;
+	animation-timing-function: linear;
+	animation-delay: 0s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-fill-mode: none;
+	animation-play-state: running;	
+}
+
+.gc_high {
+	display: none;
+	stroke: none;
+}
+
+@keyframes gc_button_high {
+	0% {
+		opacity: 1;
+		filter: brightness(140%);
+	}
+
+	100% {
+		opacity: 0.5;
+		filter: brightness(100%);
+	}
+}
+
+#gc-frame {
+    position: absolute;
+    background: url(../images/ui_parts.png) no-repeat;
+    background-position: $ui-cc001-position;
+    width: $ui-cc001-width;
+    height: $ui-cc001-height;
+    top: 0px;
+    left: 0px;
+}
+
+#gc-frame-base {
+    position: absolute;
+    background: url(../images/ui_parts.png) no-repeat;
+    background-position: $ui-cc013-position;
+    width: $ui-cc013-width;
+    height: $ui-cc013-height;
+    top: 46px;
+    left: 20px;
+}
+
+#game-controller-svg-frame {
+	position: absolute;
+	pointer-events: none;
+	z-index: 11;
+	mix-blend-mode: overlay;
+	overflow: inherit;
+	opacity: 0;
+}
+
+#gc-frame-base-high {
+	display: block;
+	fill:url(#frame_base_high);
+	stroke: #8fc3ff;
+	stroke-width: 20px;
+	stroke-linejoin: round;
+}
+
+.gc-frame-base-high {
+	animation-name: gc_frame_high;
+	animation-duration: 4.0s;
+	animation-timing-function: linear;
+	animation-delay: 0s;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+	animation-fill-mode: backwards;
+	animation-play-state: running;
+}
+
+@keyframes gc_frame_high {
+	
+	0% {
+		opacity: 0.1;
+		filter: blur(5px) brightness(30%);
+	}
+
+	6% {
+		opacity: 0.65;
+		filter: blur(27px) brightness(120%);
+	}
+
+	12% {
+		opacity: 0.1;
+		filter: blur(5px) brightness(30%);
+	}
+
+	18% {
+		opacity: 0.65;
+		filter: blur(27px) brightness(120%);
+	}
+
+	24% {
+		opacity: 0.0;
+		filter: blur(5px) brightness(30%);
+	}
+
+	100% {
+		opacity: 0.0;
+		filter: blur(0px) brightness(0%);
+	}
+
+}
+
+// Playボタン(Toggle to Pause)
+.button_play {
+	background: url("../images/ui_parts.png") no-repeat;
+	background-position: $ui-cc007n-position;
+	width: $ui-cc007n-width;
+	height: $ui-cc007n-height;
+    position: absolute;
+    top: 100px;
+	left: 74px;
+    outline: none;
+}
+
+.button_play_down {
+	background-position: $ui-cc007c-position;
+}
+
+.button_play_disabled {
+	background-position: $ui-cc007d-position;
+}
+
+.button_play_high {
+	display: block;
+	fill:url(#button_high1);
+}
+
+// Pauseボタン(Toggle to Play)
+.button_pause {
+	background-position: $ui-cc008n-position;
+}
+
+.button_pause_down {
+	background-position: $ui-cc008c-position;
+}
+
+.button_pause_disabled {
+	background-position: $ui-cc008d-position;
+}
+
+.button_pause_high {
+	display: block;
+	fill:url(#button_high1);
+}
+
+// Nextボタン
+.button_next {
+	background: url("../images/ui_parts.png") no-repeat;
+	background-position: $ui-cc009n-position;
+	width: $ui-cc009n-width;
+	height: $ui-cc009n-height;
+    position: absolute;
+    top: 76px;
+	left: 144px;
+    outline: none;
+}
+
+.button_next_down {
+	background-position: $ui-cc009c-position;
+}
+
+.button_next_disabled {
+	background-position: $ui-cc009d-position;
+}
+
+.button_next_high {
+	display: block;
+	fill:url(#button_high1);
+}
+
+// Prevボタン
+.button_prev {
+	background: url("../images/ui_parts.png") no-repeat;
+	background-position: $ui-cc011n-position;
+	width: $ui-cc011n-width;
+	height: $ui-cc011n-height;
+    position: absolute;
+    top: 76px;
+	left: 24px;
+    outline: none;
+}
+
+.button_prev_down {
+	background-position: $ui-cc011c-position;
+}
+
+.button_prev_disabled {
+	background-position: $ui-cc011d-position;
+}
+
+.button_prev_high {
+	display: block;
+	fill:url(#button_high1);
+}
+
+// Next Sceneボタン
+.button_next_scene {
+	background: url("../images/ui_parts.png") no-repeat;
+	background-position: $ui-cc010n-position;
+	width: $ui-cc010n-width;
+	height: $ui-cc010n-height;
+    position: absolute;
+    top: 48px;
+	left: 50px;
+	outline: none;
+}
+
+.button_next_scene_down {
+	background-position: $ui-cc010c-position;
+}
+
+.button_next_scene_disabled {
+	background-position: $ui-cc010d-position;
+}
+
+.button_next_scene_high {
+	display: block;
+	fill:url(#button_high1);
+}
+
+// Prev Sceneボタン
+.button_prev_scene {
+	background: url("../images/ui_parts.png") no-repeat;
+	background-position: $ui-cc012n-position;
+	width: $ui-cc012n-width;
+	height: $ui-cc012n-height;
+    position: absolute;
+    top: 170px;
+	left: 52px;
+	outline: none;
+}
+
+.button_prev_scene_down {
+	background-position: $ui-cc012c-position;
+}
+
+.button_prev_scene_disabled {
+	background-position: $ui-cc012d-position;
+}
+
+.button_prev_scene_high {
+	display: block;
+	fill:url(#button_high1);
+}
+
+// Autoボタン
+.button_auto {
+	background: url("../images/ui_parts.png") no-repeat;
+	background-position: $ui-cc002n-position;
+	width: $ui-cc002n-width;
+	height: $ui-cc002n-height;
+    position: absolute;
+    top: 50px;
+	left: 147px;
+	outline: none;
+}
+
+.button_auto_down {
+	background-position: $ui-cc002c-position;
+}
+
+.button_auto_disabled {
+	background-position: $ui-cc002d-position;
+}
+
+.button_auto_on {
+	background-position: $ui-cc002a-position;
+}
+
+.button_auto_on_down {
+	background-position: $ui-cc002c-position;
+}
+
+.button_auto_on_disabled {
+	background-position: $ui-cc002d-position;
+}
+
+.button_auto_high {
+	display: block;
+	fill:url(#button_high2);
+}
+
+// Skipボタン
+.button_skip {
+	background: url("../images/ui_parts.png") no-repeat;
+	background-position: $ui-cc003n-position;
+	width: $ui-cc003n-width;
+	height: $ui-cc003n-height;
+    position: absolute;
+    top: 92px;
+	left: 202px;
+	outline: none;
+}
+
+.button_skip_down {
+	background-position: $ui-cc003c-position;
+}
+
+.button_skip_disabled {
+	background-position: $ui-cc003d-position;
+}
+
+.button_skip_on {
+	background-position: $ui-cc003a-position;
+}
+
+.button_skip_on_down {
+	background-position: $ui-cc003c-position;
+}
+
+.button_skip_on_disabled {
+	background-position: $ui-cc003d-position;
+}
+
+.button_skip_high {
+	display: block;
+	fill:url(#button_high2);
+}
+
+// Titleボタン
+.button_title {
+	background: url("../images/ui_parts.png") no-repeat;
+	background-position: $ui-cc004n-position;
+	width: $ui-cc004n-width;
+	height: $ui-cc004n-height;
+    position: absolute;
+    top: 126px;
+	left: 208px;
+	outline: none;
+}
+
+.button_title_down {
+	background-position: $ui-cc004c-position;
+}
+
+.button_title_disabled {
+	background-position: $ui-cc004d-position;
+}
+
+.button_title_high {
+	display: block;
+	fill:url(#button_high2);
+}
+
+// Configボタン
+.button_config {
+	background: url("../images/ui_parts.png") no-repeat;
+	background-position: $ui-cc005n-position;
+	width: $ui-cc005n-width;
+	height: $ui-cc005n-height;
+    position: absolute;
+    top: 156px;
+	left: 202px;
+	outline: none;
+}
+
+.button_config_down {
+	background-position: $ui-cc005c-position;
+}
+
+.button_config_disabled {
+	background-position: $ui-cc005d-position;
+}
+
+.button_config_high {
+	display: block;
+	fill:url(#button_high2);
+}
+
+// Quitボタン
+.button_quit {
+	background: url("../images/ui_parts.png") no-repeat;
+	background-position: $ui-cc006n-position;
+	width: $ui-cc006n-width;
+	height: $ui-cc006n-height;
+    position: absolute;
+    top: 182px;
+	left: 147px;
+	outline: none;
+}
+
+.button_quit_down {
+	background-position: $ui-cc006c-position;
+}
+
+.button_quit_disabled {
+	background-position: $ui-cc006d-position;
+}
+
+.button_quit_high {
+	display: block;
+	fill:url(#button_high2);
+}
+
+// 照準ボタン
+
+.button_reticle {
+	background: url("../images/ui_parts.png") no-repeat;
+	background-position: $ui-cc014n-position;
+	width: $ui-cc014n-width;
+	height: $ui-cc014n-height;
+    position: absolute;
+    top: 33px;
+	left: 180px;
+	outline: none;
+}
+
+.button_reticle_disabled {
+	background-position: $ui-cc014d-position;
+}
+
+.button_reticle_on {
+	background-position: $ui-cc014a-position;
+}
+
+.button_reticle_on_disabled {
+	background-position: $ui-cc014d-position;
+}
+
+.button_camera {
+	background: url("../images/ui_parts.png") no-repeat;
+	background-position: $ui-cc015n-position;
+	width: $ui-cc015n-width;
+	height: $ui-cc015n-height;
+    position: absolute;
+    top: 36px;
+	left: 208px;
+	outline: none;
+}
+
+.button_camera_disabled {
+	background-position: $ui-cc015d-position;
+}
+
+.button_camera_on {
+	background-position: $ui-cc015a-position;
+}
+
+.button_camera_on_disabled {
+	background-position: $ui-cc015d-position;
+}
+
+.button_camera1 {
+	background: url("../images/ui_parts.png") no-repeat;
+	background-position: $ui-cc016n-position;
+	width: $ui-cc016n-width;
+	height: $ui-cc016n-height;
+    position: absolute;
+    top: 36px;
+	left: 230px;
+	outline: none;
+}
+
+.button_camera1_disabled {
+	background-position: $ui-cc016d-position;
+}
+
+.button_camera1_on {
+	background-position: $ui-cc016a-position;
+}
+
+.button_camera1_on_disabled {
+	background-position: $ui-cc016d-position;
+}
+
+.button_camera2 {
+	background: url("../images/ui_parts.png") no-repeat;
+	background-position: $ui-cc017n-position;
+	width: $ui-cc017n-width;
+	height: $ui-cc017n-height;
+    position: absolute;
+    top: 36px;
+	left: 244px;
+	outline: none;
+}
+
+.button_camera2_disabled {
+	background-position: $ui-cc017d-position;
+}
+
+.button_camera2_on {
+	background-position: $ui-cc017a-position;
+}
+
+.button_camera2_on_disabled {
+	background-position: $ui-cc017d-position;
+}
+
+.button_camera3 {
+	background: url("../images/ui_parts.png") no-repeat;
+	background-position: $ui-cc018n-position;
+	width: $ui-cc018n-width;
+	height: $ui-cc018n-height;
+    position: absolute;
+    top: 36px;
+	left: 258px;
+	outline: none;
+}
+
+.button_camera3_disabled {
+	background-position: $ui-cc018d-position;
+}
+
+.button_camera3_on {
+	background-position: $ui-cc018a-position;
+}
+
+.button_camera3_on_disabled {
+	background-position: $ui-cc018d-position;
+}
+
+.button_camera360 {
+	background: url("../images/ui_parts.png") no-repeat;
+	background-position: $ui-cc019n-position;
+	width: $ui-cc019n-width;
+	height: $ui-cc019n-height;
+    position: absolute;
+    top: 36px;
+	left: 272px;
+	outline: none;
+}
+
+.button_camera360_disabled {
+	background-position: $ui-cc019d-position;
+}
+
+.button_camera360_on {
+	background-position: $ui-cc019a-position;
+}
+
+.button_camera360_on_disabled {
+	background-position: $ui-cc019d-position;
+}
+
+.button_close {
+	background: url("../images/ui_parts.png") no-repeat;
+	background-position: $ui-cc021n-position;
+	width: $ui-cc021n-width;
+	height: $ui-cc021n-height;
+    position: absolute;
+    top: 34px;
+	left: 316px;
+	outline: none;
+}
+
+.button_close_down {
+	background-position: $ui-cc021c-position;
+}
+
+#message_screen_container {
+	background: #00FF0000;
+	width: 210px;
+	height: 27px;
+	top: 2px;
+	left: 114px;
+	position: absolute;
+	overflow: hidden;
+}
+
+#controller_message {
+	background-image: url(../images/ui_parts.png);
+	background-repeat: no-repeat;
+	width: $ui-cc032-width;
+	height: $ui-cc032-height;
+	position: absolute;
+	left:-200px;
+	opacity: 0.5;
+}
+
+.message_auto {
+	background-position: $ui-cc022-position;
+}
+
+.message_skip {
+	background-position: $ui-cc023-position;
+}
+
+.message_title {
+	background-position: $ui-cc024-position;
+}
+
+.message_config {
+	background-position: $ui-cc025-position;
+}
+
+.message_quit {
+	background-position: $ui-cc026-position;
+}
+
+.message_playAndpause {
+	background-position: $ui-cc027-position;
+}
+
+.message_next {
+	background-position: $ui-cc028-position;
+}
+
+.message_prev {
+	background-position: $ui-cc030-position;
+}
+
+.message_next_scene {
+	background-position: $ui-cc029-position;
+}
+
+.message_prev_scene {
+	background-position: $ui-cc031-position;
+}
+
+.message_show_reticle {
+	background-position: $ui-cc032-position;
+}
+
+.message_show_reticle {
+	background-position: $ui-cc032-position;
+}
+
+.message_reticle1 {
+	background-position: $ui-cc033-position;
+}
+
+.message_reticle2 {
+	background-position: $ui-cc034-position;
+}
+
+.message_reticle3 {
+	background-position: $ui-cc035-position;
+}
+
+.message_reticle360 {
+	background-position: $ui-cc036-position;
+}

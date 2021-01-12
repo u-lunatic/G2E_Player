@@ -1,0 +1,23 @@
+@charset "UTF-8";
+/*
+Copyright (c) 2021 Luna's Torture Room / るなてぃっく
+Released under the MIT license
+http://opensource.org/licenses/mit-license.php
+*/
+body { margin: 0px; padding: 0px; position: fixed; }
+
+.game-canvas { position: absolute; }
+
+#game-background-scroll::-webkit-scrollbar { width: 12px; }
+
+#game-background-scroll::-webkit-scrollbar-track { border-radius: 12px; background-color: black; }
+
+#game-background-scroll::-webkit-scrollbar-thumb { background-color: black; border-radius: 12px; border: solid 1px #909090; }
+
+.introduction { position: relative; background-color: #000000; top: 70px; left: 60px; width: 1800px; color: white; font-size: 26px; line-height: 36px; letter-spacing: 0.05em; }
+
+.credit-chapter { position: relative; width: 1920px; top: 80px; left: 0px; background-color: #000000; color: white; font-size: 34px; font-weight: bold; text-align: Left; line-height: 36px; letter-spacing: 0.05em; padding-left: 30px; }
+
+.credit-text { position: relative; background-color: #000000; top: 80px; left: 60px; width: 1800px; color: white; font-size: 25px; line-height: 36px; letter-spacing: 0.05em; margin-bottom: 30px; }
+
+.signature { position: relative; background-color: rgba(128, 128, 128, 0); top: 140px; left: 0px; width: 1860px; height: 50px; color: white; font-size: 25px; line-height: 50px; letter-spacing: 0.05em; text-align: right; }

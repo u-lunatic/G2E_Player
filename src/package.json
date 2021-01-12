@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "start": "electron ./resources/app",
+    "build:windows": "node ./build-win.js"
+  },
+  "devDependencies": {
+    "electron": "^6.0.6",
+    "electron-builder": "^22.9.1"
+  }
+}

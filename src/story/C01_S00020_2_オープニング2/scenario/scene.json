@@ -1,0 +1,451 @@
+{
+	"title" : "オープニング２",
+	"letters" : {
+		"scn017_01" : {
+			"config" : {
+				"textspeed" : 70,
+				"nowait" : false
+			},
+			"type" : "balloon",
+			"pages" : [
+				{
+					"name" : "モニターの女",
+					"textlines" : [
+						{
+							"text" : "目が覚めたかな？"
+						}
+					],
+					"pageclosegap" : 1600
+				}
+			]
+		},
+		"scn017_03" : {
+			"pages" : [
+				{
+					"name" : "朝葵 日佳里",
+					"textlines" : [
+						{
+							"text" : "な、なに…？\r\nここはどこ…？"
+						}
+					]
+				},
+				{
+					"name" : "モニターの女",
+					"textlines" : [
+						{
+							"text" : "あらら、突然殴って連れてきたから覚えてないかな？\r\n彼女には手加減するようにいつも言ってるのだけどなあ……。"
+						}
+					]
+				},
+				{
+					"name" : "モニターの女",
+					"textlines" : [
+						{
+							"text" : "こんにちは。朝葵 日佳里ちゃん。\r\nここはボクが統括する研究所の実験施設だよ。"
+						}
+					]
+				},
+				{
+					"name" : "モニターの女",
+					"textlines" : [
+						{
+							"text" : "手荒な真似をして連れてきてわるかったね。\r\n身体は傷まないかい？"
+						}
+					]
+				},
+				{
+					"type" : "action",
+					"action" : {
+						"jump_to" : "ID01017_04"
+					}
+				}
+			]
+		},
+		"scn017_05" : {
+			"pages" : [
+				{
+					"name" : "朝葵 日佳里",
+					"textlines" : [
+						{
+							"text" : "痛っ……！"
+						}
+					]
+				},
+				{
+					"name" : "モニターの女",
+					"textlines" : [
+						{
+							"text" : "あらー…ごめんねぇ、\r\nすぐに痛みが引くようにしてあげるからね。\r\n……少し待っててね。"
+						}
+					]
+				},
+				{
+					"name" : "朝葵 日佳里",
+					"textlines" : [
+						{
+							"text" : "一体、なんなんですか……！？\r\n早くここから出してください！"
+						}
+					]
+				},
+				{
+					"type" : "action",
+					"action" : {
+						"jump_to" : "ID01018"
+					}
+				}
+			]
+		},
+		"scn018" : {
+			"pages" : [
+				{
+					"name" : "モニターの女",
+					"textlines" : [
+						{
+							"text" : "まあまあ、そんなに焦らないで。\r\n君にはやってもらいたいことがあって、\r\nここにきてもらったんだ。"
+						}
+					]
+				},
+				{
+					"name" : "モニターの女",
+					"textlines" : [
+						{
+							"text" : "まずはこの動画を見てもらえるかな。"
+						}
+					]
+				},
+				{
+					"type" : "action",
+					"action" : {
+						"loop_stop" : false
+					}
+				}
+			]
+		},
+		"scn019_01" : {
+			"custom" : true,
+			"config" : {
+				"textspeed" : 72,
+				"nowait" : false,
+				"pageclosegap" : 1000
+			},
+			"type" : "balloon",
+			"pages" : [
+				{
+					"name" : "モニターの女",
+					"textlines" : [
+						{
+							"text" : "日佳里ちゃんにはボク達が主催するゲームに参加してもらう。"
+						}
+					]
+				}
+			]
+		},
+		"scn019_02" : {
+			"custom" : true,
+			"config" : {
+				"textspeed" : 72,
+				"nowait" : false,
+				"pageclosegap" : 1200
+			},
+			"type" : "balloon",
+			"pages" : [
+				{
+					"name" : "朝葵 日佳里",
+					"textlines" : [
+						{
+							"text" : "ゲーム……？"
+						}
+					]
+				}
+			]
+		},
+		"scn019_03" : {
+			"custom" : true,
+			"config" : {
+				"textspeed" : 72,
+				"nowait" : false,
+				"pageclosegap" : 1120
+			},
+			"type" : "balloon",
+			"pages" : [
+				{
+					"name" : "モニターの女",
+					"textlines" : [
+						{
+							"text" : "この研究所では様々な兵器や薬物を開発しているんだ。\r\nそこで開発したものをゲームという形で使ってもらって\r\nテストを行っているんだよ。\r\n"
+						}
+					]
+				}
+			]
+		},
+		"scn019_04" : {
+			"custom" : true,
+			"config" : {
+				"textspeed" : 72,
+				"nowait" : false,
+				"pageclosegap" : 1120
+			},
+			"type" : "balloon",
+			"pages" : [
+				{
+					"name" : "モニターの女",
+					"textlines" : [
+						{
+							"text" : "……というのは建前で本当は拐（かどわ）かしてきた\r\n哀れなモルモット達がのたうち回って死ぬのを鑑賞するのが\r\nとても好きなんだよね。"
+						}
+					]
+				}
+			]
+		},
+		"scn019_05" : {
+			"custom" : true,
+			"config" : {
+				"textspeed" : 72,
+				"nowait" : false,
+				"pageclosegap" : 1120
+			},
+			"type" : "balloon",
+			"pages" : [
+				{
+					"name" : "モニターの女",
+					"textlines" : [
+						{
+							"text" : "心配はしないで。すぐに死んでしまったらツマラナイからね。\r\nとても強力な蘇生薬を開発してあるんだ。\r\nどんな致命傷でも大抵は直してしまうすぐれものだよ。"
+						}
+					]
+				}
+			]
+		},
+		"scn019_06" : {
+			"custom" : true,
+			"config" : {
+				"textspeed" : 72,
+				"nowait" : false,
+				"pageclosegap" : 1120
+			},
+			"type" : "balloon",
+			"pages" : [
+				{
+					"name" : "モニターの女",
+					"textlines" : [
+						{
+							"text" : "何度だって苦しんで死ねるんだ！すばらしいよね！\r\n薬は日佳里ちゃんの首の機械からすぐに投与してあげる！\r\nたのしみだね！"
+						}
+					]
+				}
+			]
+		},
+		"scn027_01" : {
+			"pages" : [
+				{
+					"name" : "朝葵 日佳里",
+					"textlines" : [
+						{
+							"text" : "ひっ……ぁ……"
+						}
+					]
+				},
+				{
+					"name" : "モニターの女",
+					"textlines" : [
+						{
+							"text" : "見たとおり深い傷くらいなら簡単に治してしまうよ。\r\nさすがにあそこまでぐちゃぐちゃに潰されたら\r\n元には戻れないね。かわいそうだけど。"
+						}
+					]
+				},
+				{
+					"name" : "モニターの女",
+					"textlines" : [
+						{
+							"text" : "……おーい、聞いてるかな？\r\nまあ、いつも通りの反応で大変よろしい。\r\nじゃあ、もうお薬投与しちゃおうかな。"
+						}
+					]
+				},
+				{
+					"type" : "action",
+					"action" : {
+						"jump_to" : "ID01027_02"
+					}
+				}
+			]
+		},
+		"scn027_04" : {
+			"pages" : [
+				{
+					"name" : "モニターの女",
+					"textlines" : [
+						{
+							"text" : "これで日佳里ちゃんはほぼ不死身の女の子になれたよ！\r\n……簡単に死なないのがいい事とは限らないけど、…ね♪"
+						}
+					]
+				},
+				{
+					"name" : "朝葵 日佳里",
+					"textlines" : [
+						{
+							"text" : "……いやです！ここから出して！"
+						}
+					]
+				},
+				{
+					"name" : "モニターの女",
+					"textlines" : [
+						{
+							"text" : "うん、今からここを出てもらうよ。"
+						}
+					]
+				},
+				{
+					"name" : "朝葵 日佳里",
+					"textlines" : [
+						{
+							"text" : "……！？"
+						}
+					]
+				},
+				{
+					"type" : "action",
+					"action" : {
+						"jump_to" : "ID01028"
+					}
+				}
+			]
+		},
+		"scn028" : {
+			"pages" : [
+				{
+					"name" : "モニターの女",
+					"textlines" : [
+						{
+							"text" : "さっき見せたゲームのことだよ。ルールは簡単、生きて\r\nここから脱出すること。日佳里ちゃんが成功すれば\r\nここから出られるというわけさ。"
+						}
+					]
+				},
+				{
+					"name" : "モニターの女",
+					"textlines" : [
+						{
+							"text" : "ベッドの横に置いてあるのは脱出に使ってもらう武器だよ。\r\n一応この研究所で開発したものだから成果を出してくれるのを\r\n期待しているよ。"
+						}
+					]
+				},
+				{
+					"name" : "モニターの女",
+					"textlines" : [
+						{
+							"text" : "お話はこれで終わりだけど、理解してもらえたかな。"
+						}
+					]
+				},
+				{
+					"type" : "action",
+					"action" : {
+						"jump_to" : "ID01029_01"
+					}
+				}
+			]
+		},
+		"scn029_01" : {
+			"pages" : [
+				{
+					"name" : "朝葵 日佳里",
+					"textlines" : [
+						{
+							"text" : "おかしい……貴方達、おかしい……\r\nこんなのやだ…… "
+						},
+						{
+							"action" : {
+								"snd_voc" : [
+									{
+										"file" : "01029_01_v.opus",
+										"action" : "start"
+									}
+								]
+							}
+						},
+						{
+							"text" : "ここから出してください……\r\nぅぐ…… ひっく……"
+						}
+					]
+				},
+				{
+					"type" : "action",
+					"action" : {
+						"jump_to" : "ID01029_02"
+					}
+				}
+			]
+		},
+		"scn029_02" : {
+			"pages" : [
+				{
+					"name" : "朝葵 日佳里",
+					"textlines" : [
+						{
+							"text" : "はやくここから出してよ！"
+						}
+					]
+				},
+				{
+					"name" : "モニターの女",
+					"textlines" : [
+						{
+							"text" : "……まだ、理解できなかったかな？\r\n何を言っても日佳里ちゃんはゲームを見事クリアして\r\n自力でここから出るしかないんだよ♪"
+						}
+					]
+				},
+				{
+					"type" : "action",
+					"action" : {
+						"jump_to" : "ID01031"
+					}
+				}
+			]
+		},
+		"scn031" : {
+			"config" : {
+				"textspeed" : 70,
+				"nowait" : false
+			},
+			"type" : "balloon",
+			"pages" : [
+				{
+					"name" : "モニターの女",
+					"textlines" : [
+						{
+							"text" : "さあ、出発の時間だよ。\r\n準備はいいかい？"
+						}
+					],
+					"pageclosegap" : 1800
+				}
+			]
+		},
+		"scn032_01" : {
+			"pages" : [
+				{
+					"name" : "朝葵 日佳里",
+					"textlines" : [
+						{
+							"text" : "……うぅっ、いや……いやぁっ……\r\nどうしてこんなことするの……？"
+						}
+					]
+				},
+				{
+					"name" : "朝葵 日佳里",
+					"textlines" : [
+						{
+							"text" : "こんなの無理だよ……\r\n助けて……パパ……ママ……"
+						}
+					]
+				},
+				{
+					"type" : "action",
+					"action" : {
+						"jump_to" : "ID01032_02"
+					}
+				}
+			]
+		}
+	},
+	"credit" : "制作：\r\nLuna's Torture Room / るなてぃっく\r\nキャスト：\r\n朝葵 日佳里 … CV：暁鞠子/ぶらっくわーくす音声素材集\r\n先に●された少女 …  CV：暁鞠子/ぶらっくわーくす音声素材集\r\n他 … CV：涼貴涼/ぶらっくわーくす音声素材集"
+}

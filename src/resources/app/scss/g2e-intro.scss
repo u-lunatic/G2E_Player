@@ -1,0 +1,16 @@
+/*
+Copyright (c) 2021 Luna's Torture Room / るなてぃっく
+Released under the MIT license
+http://opensource.org/licenses/mit-license.php
+*/
+@import "../scss_values/ui-parts-values.scss";
+
+body {
+	margin : 0px;
+	padding: 0px;
+	position: fixed;
+}
+
+.game-canvas {
+    position: absolute;
+}

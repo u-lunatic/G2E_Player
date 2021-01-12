@@ -1,0 +1,456 @@
+/*
+Copyright (c) 2021 Luna's Torture Room / るなてぃっく
+Released under the MIT license
+http://opensource.org/licenses/mit-license.php
+*/
+@import "../scss_values/ui-parts-values.scss";
+
+body {
+	margin : 0px;
+	padding: 0px;
+	position: fixed;
+}
+
+#game-background-fix {
+	background: url(../images/b009.png) no-repeat;
+}
+
+#bg-header {
+	background: url(../images/ui_parts.png) no-repeat;
+	background-position: $ui-b001-position;
+	width: $ui-b001-width;
+	height: $ui-b001-height;
+	position: absolute;
+	top: 0px;
+    left: 0px;
+    
+    -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1) 0%,rgba(0,0,0,1) 0%,rgba(0,0,0,0) 0%,rgba(0,0,0,0) 100%);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: 0 0;
+    -webkit-mask-size: contain;
+}
+
+#bg-footer {
+	background: url(../images/ui_parts.png) no-repeat;
+	background-position: $ui-b014-position;
+	width: $ui-b014-width;
+	height: $ui-b014-height;
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+
+    -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,1) 0%,rgba(0,0,0,1) 0%,rgba(0,0,0,0) 0%,rgba(0,0,0,0) 100%);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: 0 0;
+    -webkit-mask-size: contain;
+}
+
+.footer-reveal {
+    opacity: 0.0;
+}
+
+#button-container {
+	position: relative;
+	background : linear-gradient(to right, rgba(124,127,149,0.44) 0%,rgba(124,127,149,0.16) 80%);
+	width: 1920px;
+	height: 94px;
+	top: 358px;
+	left: 0px;
+	display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+	align-items: center;
+}
+
+#start-button {
+    padding: 0px;
+    margin : 0px;
+}
+
+#start-button a {
+    background-image : url('../images/ui_parts.png');
+    background-repeat: no-repeat;
+    background-position: $ui-b002n-position;
+    width: $ui-b002n-width;
+    height: $ui-b002n-height;
+    display : block;
+}
+
+#start-button a:hover {
+    background-image : url('../images/ui_parts.png');
+    background-repeat: no-repeat;
+    background-position: $ui-b002mo-position;
+    width: $ui-b002mo-width;
+    height: $ui-b002mo-height;
+    display : block;
+}
+
+#start-button a:active {
+    background-image : url('../images/ui_parts.png');
+    background-repeat: no-repeat;
+    background-position: $ui-b002c-position;
+    width: $ui-b002c-width;
+    height: $ui-b002c-height;
+    display : block;
+}
+
+.button_start {
+	background: url("../images/ui_parts.png") no-repeat;
+	background-position: $ui-b002n-position;
+	width: $ui-b002n-width;
+	height: $ui-b002n-height;
+    // position: absolute;
+    outline: none;
+    display: block;
+}
+
+.button_start_down {
+	background-position: $ui-b002c-position;
+}
+
+.button_start_hover {
+	background-position: $ui-b002mo-position;
+}
+
+#config-button {
+    padding: 0px;
+    margin : 0px;
+}
+
+#config-button a {
+    background-image : url('../images/ui_parts.png');
+    background-repeat: no-repeat;
+    background-position: $ui-b004n-position;
+    width: $ui-b004n-width;
+    height: $ui-b004n-height;
+    display : block;
+}
+
+#config-button a:hover {
+    background-image : url('../images/ui_parts.png');
+    background-repeat: no-repeat;
+    background-position: $ui-b004mo-position;
+    width: $ui-b004mo-width;
+    height: $ui-b004mo-height;
+    display : block;
+}
+
+#config-button a:active {
+    background-image : url('../images/ui_parts.png');
+    background-repeat: no-repeat;
+    background-position: $ui-b004c-position;
+    width: $ui-b004c-width;
+    height: $ui-b004c-height;
+    display : block;
+}
+
+.button_config {
+	background: url("../images/ui_parts.png") no-repeat;
+	background-position: $ui-b004n-position;
+	width: $ui-b004n-width;
+	height: $ui-b004n-height;
+    // position: absolute;
+    outline: none;
+    display: block;
+}
+
+.button_config_down {
+	background-position: $ui-b004c-position;
+}
+
+.button_config_hover {
+	background-position: $ui-b004mo-position;
+}
+
+#gallery-button {
+    padding: 0px;
+    margin : 0px;
+}
+
+#gallery-button a {
+    background-image : url('../images/ui_parts.png');
+    background-repeat: no-repeat;
+    background-position: $ui-b003n-position;
+    width: $ui-b003n-width;
+    height: $ui-b003n-height;
+    display : block;
+}
+
+#gallery-button a:hover {
+    background-image : url('../images/ui_parts.png');
+    background-repeat: no-repeat;
+    background-position: $ui-b003mo-position;
+    width: $ui-b003mo-width;
+    height: $ui-b003mo-height;
+    display : block;
+}
+
+#gallery-button a:active {
+    background-image : url('../images/ui_parts.png');
+    background-repeat: no-repeat;
+    background-position: $ui-b003c-position;
+    width: $ui-b003c-width;
+    height: $ui-b003c-height;
+    display : block;
+}
+
+.button_gallery {
+	background: url("../images/ui_parts.png") no-repeat;
+	background-position: $ui-b003n-position;
+	width: $ui-b003n-width;
+	height: $ui-b003n-height;
+    // position: absolute;
+    outline: none;
+    display: block;
+}
+
+.button_gallery_down {
+	background-position: $ui-b003c-position;
+}
+
+.button_gallery_hover {
+	background-position: $ui-b003mo-position;
+}
+
+#message-container {
+
+    opacity: 0;
+	position: absolute;
+	background : linear-gradient(to right, rgba(124,127,149,0) 24%,rgba(124,127,149,0.26) 50%,rgba(124,127,149,0) 76%);
+	width: 1920px;
+	height: 50px;
+	top: 300px;
+    left: 0px;
+    
+    color: #EEEEEE;
+    font-size: 26px;
+    line-height: 50px;
+    text-align: center;
+	text-shadow:
+	4px 4px 4px #10101080,
+	2px  2px 2px #80808030,
+	-2px  2px 2px #80808030,
+	 2px -2px 2px #80808030,
+	-2px -2px 2px #80808030,
+	 2px  0px 2px #80808030,
+	 0px  2px 2px #80808030,
+	-2px  0px 2px #80808030,
+	 0px -2px 2px #80808030;
+
+}
+
+.message-anim {
+
+	animation-name: message_animkeys;
+	animation-duration: 2.3s;
+	animation-timing-function: ease;
+	animation-delay: 0s;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-fill-mode: forwards;
+	animation-play-state: running;
+
+};
+
+@keyframes message_animkeys {
+	20% {
+		opacity: 1.0;
+	}
+	80% {
+		opacity: 1.0;
+	}
+	100% {
+		opacity: 0.0;
+	}
+}
+
+#credit-button {
+    padding: 0px;
+    margin : 0px;
+}
+
+#credit-button a {
+    background-image : url('../images/ui_parts.png');
+    background-repeat: no-repeat;
+    background-position: $ui-b005n-position;
+    width: $ui-b005n-width;
+    height: $ui-b005n-height;
+    display : block;
+}
+
+#credit-button a:hover {
+    background-image : url('../images/ui_parts.png');
+    background-repeat: no-repeat;
+    background-position: $ui-b005mo-position;
+    width: $ui-b005mo-width;
+    height: $ui-b005mo-height;
+    display : block;
+}
+
+#credit-button a:active {
+    background-image : url('../images/ui_parts.png');
+    background-repeat: no-repeat;
+    background-position: $ui-b005c-position;
+    width: $ui-b005c-width;
+    height: $ui-b005c-height;
+    display : block;
+}
+
+.button_credit {
+	background: url("../images/ui_parts.png") no-repeat;
+	background-position: $ui-b005n-position;
+	width: $ui-b005n-width;
+	height: $ui-b005n-height;
+    // position: absolute;
+    outline: none;
+    display: block;
+}
+
+.button_credit_down {
+	background-position: $ui-b005c-position;
+}
+
+.button_credit_hover {
+	background-position: $ui-b005mo-position;
+}
+
+#quit-button {
+    padding: 0px;
+    margin : 0px;
+}
+
+#quit-button a {
+    background-image : url('../images/ui_parts.png');
+    background-repeat: no-repeat;
+    background-position: $ui-b006n-position;
+    width: $ui-b006n-width;
+    height: $ui-b006n-height;
+    display : block;
+}
+
+#quit-button a:hover {
+    background-image : url('../images/ui_parts.png');
+    background-repeat: no-repeat;
+    background-position: $ui-b006mo-position;
+    width: $ui-b006mo-width;
+    height: $ui-b006mo-height;
+    display : block;
+}
+
+#quit-button a:active {
+    background-image : url('../images/ui_parts.png');
+    background-repeat: no-repeat;
+    background-position: $ui-b006c-position;
+    width: $ui-b006c-width;
+    height: $ui-b006c-height;
+    display : block;
+}
+
+.button_quit {
+	background: url("../images/ui_parts.png") no-repeat;
+	background-position: $ui-b006n-position;
+	width: $ui-b006n-width;
+	height: $ui-b006n-height;
+    // position: absolute;
+    outline: none;
+    display: block;
+}
+
+.button_quit_down {
+	background-position: $ui-b006c-position;
+}
+
+.button_quit_hover {
+	background-position: $ui-b006mo-position;
+}
+
+#copyright-container {
+	position: relative;
+	background : linear-gradient(to right, rgba(124,127,149,0) 24%,rgba(124,127,149,0.26) 50%,rgba(124,127,149,0) 76%);
+	width: 1920px;
+	height: 40px;
+	top: 386px;
+	left: 0px;
+	display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+	align-items: center;
+}
+
+#copyright-label {
+	background: url(../images/ui_parts.png) no-repeat;
+	background-position: $ui-b007-position;
+	width: $ui-b007-width;
+	height: $ui-b007-height;	
+}
+
+.side-button {
+
+    position: absolute;
+	background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.15) 30%, rgba(255,255,255,0.15) 70%, rgba(255,255,255,0) 100%);
+    width: 110px;
+    height: 30px;
+    right: 0px;
+
+    color: #EEEEEE;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: right;
+	text-shadow:
+	4px 4px 4px #10101080,
+	2px  2px 2px #80808030,
+	-2px  2px 2px #80808030,
+	 2px -2px 2px #80808030,
+	-2px -2px 2px #80808030,
+	 2px  0px 2px #80808030,
+	 0px  2px 2px #80808030,
+	-2px  0px 2px #80808030,
+	 0px -2px 2px #80808030;
+
+}
+
+.side-button span {
+
+    margin-right: 18px;
+    filter: blur(0.1px);
+
+}
+
+.side-button:hover {
+
+    border-right: solid 5px blue;
+
+}
+
+#credit-container {
+
+    top: 170px;
+
+}
+
+#license-container {
+
+    top: 215px;
+
+}
+
+#version-container {
+	position: relative;
+	background : linear-gradient(to right, rgba(124,127,149,0) 89%,rgba(124,127,149,0.45) 100%);
+	width: 1920px;
+	height: 40px;
+	top: 386px;
+	left: 0px;
+	display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+	align-items: center;
+}
+
+#version-label {
+	background: url(../images/ui_parts.png) no-repeat;
+	background-position: $ui-b008-position;
+	width: $ui-b008-width;
+	height: $ui-b008-height;
+	
+}

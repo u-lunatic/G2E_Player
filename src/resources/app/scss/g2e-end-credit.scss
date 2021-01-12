@@ -1,0 +1,57 @@
+/*
+Copyright (c) 2021 Luna's Torture Room / るなてぃっく
+Released under the MIT license
+http://opensource.org/licenses/mit-license.php
+*/
+@import "../scss_values/ui-parts-values.scss";
+
+#credit-container {
+
+    position: absolute;
+    padding: 0;
+    padding-top: 368px;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+
+    color: white;
+    font-size: 80px;
+    text-align: center;
+    line-height: 100px;
+}
+
+#credit-container h4 {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+#credit-container span {
+    font-style: italic;
+    padding: 0;
+    margin: 0;
+}
+
+#operation-container {
+    
+    background-color: black;
+	position: absolute;
+	width: 1920px;
+	height: 40px;
+	bottom: 120px;
+	left: 0px;
+	display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+	align-items: center;
+
+}
+
+.next-op {
+    background-color: black;
+    width:500px;
+    color: white;
+    font-size: 35px;
+    text-align: center;
+}

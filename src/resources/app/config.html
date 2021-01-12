@@ -1,0 +1,199 @@
+<!doctype html>
+<html>
+<!-- 
+  Copyright (c) 2021 Luna's Torture Room / るなてぃっく
+  Released under the MIT license
+  http://opensource.org/licenses/mit-license.php
+-->
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Security-Policy" content="script-src 'self';" />
+	<link rel="stylesheet" href="css-lib/jquery-ui.css">
+	<link rel="stylesheet" href="css/g2e-common.css">
+	<link rel="stylesheet" href="css/g2e-config.css">
+	<script src="js/g2e-init-electron.js"></script>
+	<script src="js-lib/jquery-3.4.1.js"></script>
+	<script src="js-lib/jquery-ui.js"></script>
+	<script src="js-lib/jquery.rwdImageMaps.js"></script>
+	<script src="js/g2e-session.js"></script>
+	<script src="js/g2e-viewsize.js"></script>
+	<script src="js/g2e-config.js"></script>
+	<script src="js/g2e-widget.js"></script>
+	<script src="js/g2e-config-view.js"></script>
+	<title>Girls2Endless</title>
+</head>
+
+<body>
+	<main>
+		<div id="game-background-fix">
+			<div id="setting-view-label"></div>
+			<div id="window-setting-container">
+
+				<div id="window-setting-label"></div>
+
+				<div id="windowsize-container">
+
+					<div id="windowsize-setting-label"></div>
+
+					<div id="windowsize-selector-container">
+
+						<input type="radio" id="ws-1280-720" name="game-window-size">
+						<label for="ws-1280-720"></label>
+
+						<input type="radio" id="ws-1920-1080" name="game-window-size">
+						<label for="ws-1920-1080"></label>
+
+					</div>
+
+					<div id="window-fullscreen-container">
+
+						<input type="checkbox" id="ws-fllscreen" name="game-window-fullscreen">
+						<label for="ws-fllscreen"></label>
+
+					</div>
+
+
+				</div>
+
+			</div>
+			<div id="volume-setting-container">
+
+				<div id="volume-setting-label"></div>
+				<div id="volume-bgm-label"></div>
+				<div id="volume-se-label"></div>
+				<div id="volume-voice-label"></div>
+				<div id="volume-lvoice-label"></div>
+				<div id="volume-lvoice-desc"></div>
+
+				<div id="volume-container">
+
+					<div id="vol-bgm-container" class="slider-set">
+
+						<div class="confSliderButtonContainer slideLowContainer">
+							<button id="bgmSliderLow" class="confSliderButton"></button>
+						</div>
+						<div class="confSlider confSliderContainer">
+							<div id="bgmSlider" class="confSlider"></div>
+						</div>
+						<div class="confSliderButtonContainer slideUpContainer">
+							<button id="bgmSliderUp" class="confSliderButton"></button>
+						</div>
+
+					</div>
+
+					<div id="vol-se-container" class="slider-set">
+
+						<div class="confSliderButtonContainer slideLowContainer">
+							<button id="seSliderLow" class="confSliderButton"></button>
+						</div>
+						<div class="confSlider confSliderContainer">
+							<div id="seSlider" class="confSlider"></div>
+						</div>
+						<div class="confSliderButtonContainer slideUpContainer">
+							<button id="seSliderUp" class="confSliderButton"></button>
+						</div>
+
+					</div>
+
+					<div id="vol-voice-container" class="slider-set">
+
+						<div class="confSliderButtonContainer slideLowContainer">
+							<button id="voiceSliderLow" class="confSliderButton"></button>
+						</div>
+						<div class="confSlider confSliderContainer">
+							<div id="voiceSlider" class="confSlider"></div>
+						</div>
+						<div class="confSliderButtonContainer slideUpContainer">
+							<button id="voiceSliderUp" class="confSliderButton"></button>
+						</div>
+
+					</div>
+
+					<div id="vol-lvoice-container" class="slider-set">
+
+						<div class="confSliderButtonContainer slideLowContainer">
+							<button id="lvoiceSliderLow" class="confSliderButton"></button>
+						</div>
+						<div class="confSlider confSliderContainer">
+							<div id="lvoiceSlider" class="confSlider"></div>
+						</div>
+						<div class="confSliderButtonContainer slideUpContainer">
+							<button id="lvoiceSliderUp" class="confSliderButton"></button>
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+			<div id="movie-setting-container">
+
+				<div id="movie-setting-label"></div>
+
+				<div id="movie-outline-container">
+
+					<input type="radio" id="mv-outline-on" name="game-outline-onoff">
+					<label for="mv-outline-on"></label>
+
+					<input type="radio" id="mv-outline-off" name="game-outline-onoff">
+					<label for="mv-outline-off"></label>
+
+				</div>
+
+				<div id="movie-framerate-container">
+
+					<input type="checkbox" id="mv-framerate-60fps" name="game-movie-framerate">
+					<label for="mv-framerate-60fps"></label>
+
+				</div>
+
+			</div>
+			<div id="text-setting-container">
+
+				<div id="text-setting-label"></div>
+
+				<div id="text-nowait-container">
+
+					<input type="checkbox" id="text-nowait-on" name="game-text-nowait">
+					<label for="text-nowait-on"></label>
+
+				</div>
+
+				<div id="text-speed-container">
+
+					<div id="text-speed-label"></div>
+
+					<div id="text-slider-container" class="slider-set">
+
+						<div class="confSliderButtonContainer slideLowContainer">
+							<button id="textSpdSliderLow" class="confSliderButton"></button>
+						</div>
+						<div class="confSlider confSliderContainer">
+							<div id="textSpdSlider" class="confSlider"></div>
+						</div>
+						<div class="confSliderButtonContainer slideUpContainer">
+							<button id="textSpdSliderUp" class="confSliderButton"></button>
+						</div>
+
+					</div>
+
+					<div id="text-speed-screen">
+						<span id="text-speed-sample" class="text-speed-sample-common">サンプルの文字を表示しています。</span>
+						<span id="text-speed-sample-effect" class="text-speed-sample-common">サンプルの文字を表示しています。</span>
+					</div>
+
+
+				</div>
+
+			</div>
+
+			<div id="button_back" class="button_back">
+				<!-- <a href="#"></a> -->
+			</div>
+			<div id="game-fade-curtain"></div>
+		</div>
+	</main>
+</body>
+
+</html>

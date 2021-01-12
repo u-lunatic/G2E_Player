@@ -1,0 +1,732 @@
+/*
+Copyright (c) 2021 Luna's Torture Room / るなてぃっく
+Released under the MIT license
+http://opensource.org/licenses/mit-license.php
+*/
+@import "../scss_values/ui-parts-values.scss";
+
+body {
+	margin : 0px;
+	padding: 0px;
+	position: fixed;
+}
+
+#game-background-fix {
+	background: url(../images/da007.png) no-repeat;
+}
+
+img.button1 {
+	background: url("../images/ui_parts.png");
+	background-repeat: no-repeat;
+	background-position: $ui-cc007n-position;
+	width: $ui-cc007n-width;
+	height: $ui-cc007n-height;
+    position: absolute;
+    top: 135px;
+	left: 60px;
+	outline: none;
+}
+
+img.button1_down {
+	background: url("../images/ui_parts.png");
+	background-repeat: no-repeat;
+	background-position: $ui-cc007c-position;
+	width: $ui-cc007c-width;
+	height: $ui-cc007c-height;
+    position: absolute;
+    top: 135px;
+    left: 60px;
+}
+
+img.button2 {
+	background: url("../images/ui_parts.png");
+	background-repeat: no-repeat;
+	background-position: $ui-cc011n-position;
+	width: $ui-cc011n-width;
+	height: $ui-cc011n-height;
+    position: absolute;
+    top: 196px;
+    left: 116px;
+}
+
+img.button2_down {
+	background: url("../images/ui_parts.png");
+	background-repeat: no-repeat;
+	background-position: $ui-cc011c-position;
+	width: $ui-cc011c-width;
+	height: $ui-cc011c-height;
+    position: absolute;
+    top: 196px;
+    left: 116px;
+}
+
+canvas {
+	background-color: #5076D0;
+	width: 1000px;
+	height: 1500px;
+}
+
+// Backボタン(配置のみ)
+.back-button-container {
+	position : absolute;
+	top : 930px;
+	left : 30px;
+}
+
+.button_back {
+	position : absolute;
+	top : 930px;
+	left : 30px;
+}
+
+// コンフィグ画面タイトル
+#setting-view-label {
+	position : absolute;
+	background-image: url("../images/ui_parts.png");
+	background-repeat: no-repeat;
+	background-position: $ui-db001-position;
+	width: $ui-db001-width;
+	height: $ui-db001-height;
+	top : 30px;
+	left : 24px;
+	padding : 0px;
+	margin : 0px;
+}
+
+// 画面設定枠
+#window-setting-container {
+	position : absolute;
+    top : 132px;
+    left: 38px;
+    width: 870px;
+    height: 246px;
+    background: #2648E900;
+    padding: 0px;
+    margin : 0px;
+}
+
+#window-setting-label {
+	position : absolute;
+	background-image: url("../images/ui_parts.png");
+	background-repeat: no-repeat;
+	background-position: $ui-dd001-position;
+	width: $ui-dd001-width;
+	height: $ui-dd001-height;
+	top : 18px;
+	left : 30px;
+	padding : 0px;
+	margin : 0px;
+}
+
+#windowsize-setting-label {
+	position : absolute;
+	background-image: url("../images/ui_parts.png");
+	background-repeat: no-repeat;
+	background-position: $ui-dd002-position;
+	width: $ui-dd002-width;
+	height: $ui-dd002-height;
+	top : 0px;
+	left : 0px;
+	padding : 0px;
+	margin : 0px;
+	margin-left: -2px;
+	margin-top : -4px;
+}
+
+// ウィンドウサイズ(ラジオボタン)
+#windowsize-container {
+	position: relative;
+	top : 104px;
+	left : 70px;
+	width : 750px;
+	height : 98px;
+	background : #80808000;
+
+}
+
+#windowsize-selector-container {
+	position: absolute;
+	top : 0px;
+	left : 376px;
+	width : 400px;
+	height : 40px;
+	background : #FF000000;
+
+	overflow: visible;
+
+}
+
+label[for='ws-1280-720'] {
+	background : url(../images/ui_parts.png);
+	background-repeat: no-repeat;
+	background-position: $ui-dd003-position;
+	width: $ui-dd003-width;
+	height: $ui-dd003-height;
+	display: inline-block;
+	vertical-align: middle;
+
+}
+
+label[for='ws-1920-1080'] {
+	background : url(../images/ui_parts.png);
+	background-repeat: no-repeat;
+	background-position: $ui-dd004-position;
+	width: $ui-dd004-width;
+	height: $ui-dd004-height;
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 72px;
+
+}
+
+// フルスクリーン(チェックボックス)
+#window-fullscreen-container {
+	position: absolute;
+	top : 62px;
+	left : 530px;
+	width : 246px;
+	height : 42px;
+	background : #00FF0000;
+
+	overflow: visible;
+
+}
+
+label[for='ws-fllscreen'] {
+	background : url(../images/ui_parts.png);
+	background-repeat: no-repeat;
+	background-position: $ui-dd005-position;
+	width: $ui-dd005-width;
+	height: $ui-dd005-height;
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 50px;
+
+}
+
+// サウンド設定
+#volume-setting-container {
+	position : absolute;
+    top : 400px;
+    left: 38px;
+    width: 870px;
+    height: 400px;
+    background: #2648E900;
+    padding: 0px;
+    margin : 0px;
+}
+
+#volume-setting-label {
+	position : absolute;
+	background-image: url("../images/ui_parts.png");
+	background-repeat: no-repeat;
+	background-position: $ui-de001-position;
+	width: $ui-de001-width;
+	height: $ui-de001-height;
+	top : 18px;
+	left : 30px;
+	padding : 0px;
+	margin : 0px;
+}
+
+#volume-bgm-label {
+	position : absolute;
+	background-image: url("../images/ui_parts.png");
+	background-repeat: no-repeat;
+	background-position: $ui-de002-position;
+	width: $ui-de002-width;
+	height: $ui-de002-height;
+	top : 100px;
+	left : 70px;
+	padding : 0px;
+	margin : 0px;
+}
+#volume-se-label {
+	position : absolute;
+	background-image: url("../images/ui_parts.png");
+	background-repeat: no-repeat;
+	background-position: $ui-de003-position;
+	width: $ui-de003-width;
+	height: $ui-de003-height;
+	top : 164px;
+	left : 70px;
+	padding : 0px;
+	margin : 0px;
+}
+#volume-voice-label {
+	position : absolute;
+	background-image: url("../images/ui_parts.png");
+	background-repeat: no-repeat;
+	background-position: $ui-de004-position;
+	width: $ui-de004-width;
+	height: $ui-de004-height;
+	top : 226px;
+	left : 70px;
+	padding : 0px;
+	margin : 0px;
+}
+#volume-lvoice-label {
+	position : absolute;
+	background-image: url("../images/ui_parts.png");
+	background-repeat: no-repeat;
+	background-position: $ui-de005-position;
+	width: $ui-de005-width;
+	height: $ui-de005-height;
+	top : 288px;
+	left : 70px;
+	padding : 0px;
+	margin : 0px;
+}
+#volume-lvoice-desc {
+	position : absolute;
+	background-image: url("../images/ui_parts.png");
+	background-repeat: no-repeat;
+	background-position: $ui-de006-position;
+	width: $ui-de006-width;
+	height: $ui-de006-height;
+	top : 324px;
+	left : 70px;
+	padding : 0px;
+	margin : 0px;
+}
+
+// ボリュームスライダー
+#volume-container {
+    position: relative;
+    top : 94px;
+    left: 276px;
+    width: 537px;
+    height: 245px;
+    background: #2648E900;
+    padding: 0px;
+    margin : 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+	align-items: center;
+	
+}
+
+// ムービー設定
+#movie-setting-container {
+	position : absolute;
+    top : 132px;
+    left: 1010px;
+    width: 870px;
+    height: 246px;
+    background: #2648E900;
+    padding: 0px;
+    margin : 0px;
+}
+
+#movie-setting-label {
+	position : absolute;
+	background-image: url("../images/ui_parts.png");
+	background-repeat: no-repeat;
+	background-position: $ui-df001-position;
+	width: $ui-df001-width;
+	height: $ui-df001-height;
+	top : 18px;
+	left : 30px;
+	padding : 0px;
+	margin : 0px;
+}
+
+// 輪郭線あり・なし(ラジオボタン)
+#movie-outline-container {
+	position: absolute;
+	top : 100px;
+	left : 78px;
+	width : 400px;
+	height : 40px;
+	background : #FF000000;
+
+	overflow: visible;
+
+}
+
+label[for='mv-outline-on'] {
+	background : url(../images/ui_parts.png);
+	background-repeat: no-repeat;
+	background-position: $ui-df003-position;
+	width: $ui-df003-width;
+	height: $ui-df003-height;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+label[for='mv-outline-off'] {
+	background : url(../images/ui_parts.png);
+	background-repeat: no-repeat;
+	background-position: $ui-df002-position;
+	width: $ui-df002-width;
+	height: $ui-df002-height;
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 94px;
+}
+
+// 動画のフレームレート(チェックボックス)
+#movie-framerate-container {
+	position: absolute;
+	top : 166px;
+	left : 78px;
+	width : 400px;
+	height : 40px;
+	background : #FF000000;
+
+	overflow: visible;
+}
+
+label[for='mv-framerate-60fps'] {
+	background : url(../images/ui_parts.png);
+	background-repeat: no-repeat;
+	background-position: $ui-df004-position;
+	width: $ui-df004-width;
+	height: $ui-df004-height;
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 0px;
+
+}
+
+// テキスト設定
+#text-setting-container {
+	position : absolute;
+    top : 400px;
+    left: 1010px;
+    width: 870px;
+    height: 296px;
+    background: #2648E900;
+    padding: 0px;
+    margin : 0px;
+}
+
+#text-setting-label {
+	position : absolute;
+	background-image: url("../images/ui_parts.png");
+	background-repeat: no-repeat;
+	background-position: $ui-dg001-position;
+	width: $ui-dg001-width;
+	height: $ui-dg001-height;
+	top : 18px;
+	left : 30px;
+	padding : 0px;
+	margin : 0px;
+}
+
+// ノーウェイト設定(チェックボックス)
+#text-nowait-container {
+	position: absolute;
+	top : 64px;
+	left : 678px;
+	width : 400px;
+	height : 40px;
+	background : #FF000000;
+
+	overflow: visible;
+}
+
+label[for='text-nowait-on'] {
+	background : url(../images/ui_parts.png);
+	background-repeat: no-repeat;
+	background-position: $ui-dg003-position;
+	width: $ui-dg003-width;
+	height: $ui-dg003-height;
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 0px;
+
+}
+
+// テキストスピード
+#text-speed-container {
+	position: absolute;
+	top : 98px;
+	left : 68px;
+	width : 730px;
+	height : 174px;
+	background : #FF000000;
+
+	overflow: visible;
+}
+
+#text-speed-label {
+	position : absolute;
+	background-image: url("../images/ui_parts.png");
+	background-repeat: no-repeat;
+	background-position: $ui-dg002-position;
+	width: $ui-dg002-width;
+	height: $ui-dg002-height;
+	top : 0px;
+	left : 0px;
+	padding : 0px;
+	margin : 0px;
+}
+
+// 文字速度(カスタムスライダー)
+#text-slider-container {
+    position: absolute;
+    top : 0px;
+    left: 210px;
+    width: 537px;
+    height: 50px;
+    background: #2648E900;
+    padding: 0px;
+    margin : 0px;	
+}
+
+// 文字速度モニター
+#text-speed-screen {
+	position: absolute;
+	background-image: url("../images/ui_parts.png");
+	background-repeat: no-repeat;
+	background-position: $ui-dg004-position;
+	width: $ui-dg004-width;
+	height: $ui-dg004-height;
+	top : 68px;
+	left : 32px;
+	margin : 0px;
+	padding : 0px;
+}
+
+.text-speed-sample-common {
+	position : absolute;
+	display : inline-block;
+	color: #aeefff;
+	font-size: 40px;
+	padding: 0px;
+	margin: 0px;
+	top : 26px;
+	left : 20px;
+}
+
+#text-speed-sample-effect {
+	filter: blur(3px);
+}
+
+/* Custom Slider
+----------------------------------*/
+.slider-set {
+	position: inherit;
+	width: inherit;
+	height: 45px;
+	padding: inherit;
+	margin: inherit;
+	background: #80808000;
+	display: flex;
+    justify-content: center;
+	align-items: center;
+
+	/* outline: 1px solid #00FF1D;
+	outline-offset: -1px; */
+
+}
+
+.confSlider .ui-widget-header {
+	background: url(../images/da004.png);
+}
+
+.confSlider .ui-widget-content {
+	border: 0px solid #dddddd;
+	background: url(../images/da005.png);
+	color: #333333;
+}
+
+.confSlider .ui-corner-all,
+.confSlider .ui-corner-top,
+.confSlider .ui-corner-left,
+.confSlider .ui-corner-tl {
+	border-top-left-radius: 0px;
+}
+.confSlider .ui-corner-all,
+.confSlider .ui-corner-top,
+.confSlider .ui-corner-right,
+.confSlider .ui-corner-tr {
+	border-top-right-radius: 0px;
+}
+.confSlider .ui-corner-all,
+.confSlider .ui-corner-bottom,
+.confSlider .ui-corner-left,
+.confSlider .ui-corner-bl {
+	border-bottom-left-radius: 0px;
+}
+.confSlider .ui-corner-all,
+.confSlider .ui-corner-bottom,
+.confSlider .ui-corner-right,
+.confSlider .ui-corner-br {
+	border-bottom-right-radius: 0px;
+}
+
+.confSlider .ui-state-default,
+.confSlider .ui-widget-content .ui-state-default,
+.confSlider .ui-widget-header .ui-state-default,
+.confSlider .ui-button,
+html .confSlider .ui-button.ui-state-disabled:hover,
+html .confSlider .ui-button.ui-state-disabled:active {
+	border: 0px solid #FFFFFF;
+	background: url(../images/ui_parts.png);
+	background-position: $ui-da002-position;
+	width : $ui-da002-width;
+	height : $ui-da002-height;
+	font-weight: normal;
+	color: #454545;
+}
+
+.confSlider .ui-slider-horizontal {
+	height: 45px;
+}
+.confSlider .ui-slider-horizontal .ui-slider-handle {
+	top: 0em;
+	margin-left: -.8em;
+}
+.confSlider .ui-slider-horizontal .ui-slider-range {
+	top: 0;
+	height: 100%;
+}
+.confSlider .ui-slider-horizontal .ui-slider-range-min {
+	left: 0;
+}
+.confSlider .ui-slider-horizontal .ui-slider-range-max {
+	right: 0;
+}
+
+.confSlider .ui-slider {
+	position: relative;
+	text-align: left;
+}
+.confSlider .ui-slider .ui-slider-handle {
+	position: absolute;
+	z-index: 2;
+	// width: 26px;
+	// height: 100%;
+	cursor: pointer;
+	-ms-touch-action: none;
+	touch-action: none;
+	outline: none;
+}
+.confSlider .ui-slider .ui-slider-range {
+	position: absolute;
+	z-index: 1;
+	font-size: .7em;
+	display: block;
+	border: 0;
+	// background-position: 0 0;
+}
+
+.confSliderContainer {
+	/* top : 10px; */
+	/* left : 30px; */
+	width : 470px;
+	position: absolute;
+}
+
+
+/* Custom Slider(Low/Up Button)
+----------------------------------*/
+
+.confSliderButtonContainer {
+	position: absolute;
+}
+
+.confSliderButton {
+	z-index: 1;
+	/* top : 10px; */
+}
+
+.slideLowContainer {
+    left : 0px;
+}
+
+.slideUpContainer {
+	right: 6px;
+}
+
+.confSliderButtonContainer .ui-corner-all,
+.confSliderButtonContainer .ui-corner-top,
+.confSliderButtonContainer .ui-corner-left,
+.confSliderButtonContainer .ui-corner-tl {
+	border-top-left-radius: 0px;
+}
+.confSliderButtonContainer .ui-corner-all,
+.confSliderButtonContainer .ui-corner-top,
+.confSliderButtonContainer .ui-corner-right,
+.confSliderButtonContainer .ui-corner-tr {
+	border-top-right-radius: 0px;
+}
+.confSliderButtonContainer .ui-corner-all,
+.confSliderButtonContainer .ui-corner-bottom,
+.confSliderButtonContainer .ui-corner-left,
+.confSliderButtonContainer .ui-corner-bl {
+	border-bottom-left-radius: 0px;
+}
+.confSliderButtonContainer .ui-corner-all,
+.confSliderButtonContainer .ui-corner-bottom,
+.confSliderButtonContainer .ui-corner-right,
+.confSliderButtonContainer .ui-corner-br {
+	border-bottom-right-radius: 0px;
+}
+
+.slideLowContainer .ui-state-default,
+.slideLowContainer .ui-widget-content .ui-state-default,
+.slideLowContainer .ui-widget-header .ui-state-default,
+.slideLowContainer .ui-button,
+html .slideLowContainer .ui-button.ui-state-disabled:hover,
+html .slideLowContainer .ui-button.ui-state-disabled:active {
+	border: 0px solid #FFFFFF;
+	background: url(../images/ui_parts.png);
+	background-position: $ui-da001-position;
+	background-repeat: no-repeat;
+	width: $ui-da001-width;
+	height: $ui-da001-height;
+	
+	font-weight: normal;
+	color: #454545;
+
+	margin-left: -1px;
+
+}
+
+.slideUpContainer .ui-state-default,
+.slideUpContainer .ui-widget-content .ui-state-default,
+.slideUpContainer .ui-widget-header .ui-state-default,
+.slideUpContainer .ui-button,
+html .slideUpContainer .ui-button.ui-state-disabled:hover,
+html .slideUpContainer .ui-button.ui-state-disabled:active {
+	border: 0px solid #FFFFFF;
+	background: url(../images/ui_parts.png);
+	background-position: $ui-da003-position;
+	background-repeat: no-repeat;
+	width: $ui-da003-width;
+	height: $ui-da003-height;
+
+	font-weight: normal;
+	color: #454545;
+
+	margin-right: -7px;
+
+}
+
+.confSliderButtonContainer .ui-button {
+	padding: 0px;
+	display: block;
+	position: relative;
+	line-height: normal;
+	cursor: pointer;
+	text-align: center;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	outline: none;
+
+	overflow: visible;
+}
+
+.confSliderButtonContainer .ui-button,
+.confSliderButtonContainer .ui-button:link,
+.confSliderButtonContainer .ui-button:visited,
+.confSliderButtonContainer .ui-button:hover,
+.confSliderButtonContainer .ui-button:active {
+	text-decoration: none;
+}

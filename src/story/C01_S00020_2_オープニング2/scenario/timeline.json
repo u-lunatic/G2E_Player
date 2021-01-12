@@ -1,0 +1,963 @@
+{
+	"movies" : [
+		{
+			"id" : "PartA",
+			"timelines" : [
+				{
+					"id" : "ID01014",
+					"seektime" : 0,
+					"nextid" : "ID01015",
+					"cues" : {
+						"0" : {
+							"snd_bgm" : [
+								{
+									"file" : "laboroom01.opus",
+									"action" : "loop"
+								}
+							]
+						}
+					}
+				},
+				{
+					"id" : "ID01015",
+					"seektime" : 8583,
+					"nextid" : "ID01016",
+					"cues" : {
+						"9418" : {
+							"snd_voc" : [
+								{
+									"file" : "01015_v.opus",
+									"action" : "start"
+								}
+							]
+						},
+						"9645" : {
+							"snd_se" : [
+								{
+									"file" : "01015_s.opus",
+									"action" : "start"
+								}
+							]
+						}
+					}
+				},
+				{
+					"id" : "ID01016",
+					"seektime" : 11625,
+					"nextid" : "ID01017_01",
+					"cues" : {
+						"11634" : {
+							"snd_se" : [
+								{
+									"file" : "01016_s.opus",
+									"action" : "start"
+								}
+							]
+						},
+						"11711" : {
+							"snd_voc" : [
+								{
+									"file" : "01016_v.opus",
+									"action" : "start"
+								}
+							]
+						}
+					}
+				},
+				{
+					"id" : "ID01017_01",
+					"seektime" : 16458,
+					"nextid" : "ID01017_02",
+					"cues" : {
+						"16458" : {
+							"snd_lvoc" : [
+								{
+									"file" : "loop_monitor.opus",
+									"action" : "loop",
+									"vol" : 50
+								}
+							]
+						},
+						"17164" : {
+							"snd_voc" : [
+								{
+									"file" : "01017_01_v.opus",
+									"action" : "start"
+								}
+							]
+						},
+						"17264" : {
+							"text_start" : {
+								"id" : "scn017_01"
+							}
+						}
+					}
+				},
+				{
+					"id" : "ID01017_02",
+					"seektime" : 22500,
+					"nextid" : "ID01017_03",
+					"cues" : {
+						"22500" : {
+							"snd_lvoc" : [
+								{
+									"file" : "loop_monitor.opus",
+									"action" : "stop"
+								}
+							]
+						},
+						"22754" : {
+							"snd_voc" : [
+								{
+									"file" : "01017_02_v.opus",
+									"action" : "start"
+								}
+							]
+						}
+					}
+				},
+				{
+					"id" : "ID01017_03",
+					"nextid" : "ID01017_04",
+					"seektime" : 25541,
+					"cues" : {
+						"25541" : {
+							"snd_lvoc" : [
+								{
+									"file" : "breeze_slow_01.opus",
+									"action" : "start",
+									"vol" : 50
+								}
+							],
+							"text_start" : {
+								"id" : "scn017_03"
+							}
+						}
+					},
+					"looptime" : 2000,
+					"playback_mode" : "loop"
+				},
+				{
+					"id" : "ID01017_04",
+					"seektime" : 27583,
+					"nextid" : "ID01017_05",
+					"cues" : {
+						"27583" : {
+							"snd_voc" : [
+								{
+									"file" : "01017_04_v.opus",
+									"action" : "start"
+								}
+							]
+						}
+					}
+				},
+				{
+					"id" : "ID01017_05",
+					"seektime" : 31625,
+					"nextid" : "ID01018",
+					"cues" : {
+						"31625" : {
+							"snd_lvoc" : [
+								{
+									"file" : "breeze_slow_01.opus",
+									"action" : "stop"
+								},
+								{
+									"file" : "breeze_heart_01.opus",
+									"action" : "start",
+									"vol" : 50
+								}
+							],
+							"text_start" : {
+								"id" : "scn017_05"
+							}
+						}
+					},
+					"looptime" : 2000,
+					"playback_mode" : "loop"
+				},
+				{
+					"id" : "ID01018",
+					"seektime" : 33666,
+					"nextid" : "ID01019_01",
+					"cues" : {
+						"33666" : {
+							"snd_lvoc" : [
+								{
+									"file" : "breeze_heart_01.opus",
+									"vol" : 30
+								},
+								{
+									"file" : "loop_monitor.opus",
+									"action" : "start",
+									"vol" : 30
+								}
+							],
+							"text_start" : {
+								"id" : "scn018"
+							}
+						},
+						"39708" : {
+							"snd_lvoc" : [
+								{
+									"file" : "loop_monitor.opus",
+									"action" : "stop"
+								}
+							]
+						}
+					},
+					"looptime" : 6000,
+					"playback_mode" : "loop"
+				},
+				{
+					"id" : "ID01019_01",
+					"seektime" : 42708,
+					"nextid" : "ID01019_02",
+					"cues" : {
+						"42708" : {
+							"snd_lvoc" : [
+								{
+									"file" : "breeze_heart_01.opus",
+									"action" : "stop"
+								}
+							]
+						},
+						"43000" : {
+							"text_start" : {
+								"id" : "scn019_01",
+								"range" : [ "ID01019_01" ]
+							}
+						},
+						"42735" : {
+							"snd_bgm" : [
+								{
+									"file" : "laboroom01.opus",
+									"action" : "stop"
+								},
+								{
+									"file" : "challenge_room_01.opus",
+									"action" : "loop"
+								}
+							]
+						},
+						"44035" : {
+							"snd_se" : [
+								{
+									"file" : "01019_01_s.opus",
+									"action" : "start"
+								}
+							]
+						},
+						"45283" : {
+							"snd_lvoc" : [
+								{
+									"file" : "breeze_slow_03.opus",
+									"action" : "start",
+									"vol" : 50
+								}
+							]
+						},
+						"47400" : {
+							"text_start" : {
+								"id" : "scn019_02",
+								"range" : [ "ID01019_01" ]
+							}
+						},
+						"50000" : {
+							"text_start" : {
+								"id" : "scn019_03",
+								"range" : [ "ID01019_01", "ID01019_02" ]
+							}
+						}
+					}
+				},
+				{
+					"id" : "ID01019_02",
+					"seektime" : 51166,
+					"nextid" : "ID01019_03",
+					"cues" : {
+						"51166" : {
+							"snd_lvoc" : [
+								{
+									"file" : "breeze_slow_03.opus",
+									"action" : "start",
+									"vol" : 30
+								}
+							]
+						},
+						"51196" : {
+							"snd_se" : [
+								{
+									"file" : "01019_02_s.opus",
+									"action" : "start"
+								}
+							]
+						}
+					}
+				},
+				{
+					"id" : "ID01019_03",
+					"seektime" : 57208,
+					"nextid" : "ID01019_04",
+					"cues" : {
+						"57208" : {
+							"snd_lvoc" : [
+								{
+									"file" : "breeze_slow_03.opus",
+									"action" : "start",
+									"vol" : 60
+								}
+							],
+							"text_start" : {
+								"id" : "scn019_04",
+								"range" : [ "ID01019_03", "ID01019_04" ]
+							}
+						},
+						"57256" : {
+							"snd_se" : [
+								{
+									"file" : "01019_03_s.opus",
+									"action" : "start"
+								}
+							]
+						}
+					}
+				},
+				{
+					"id" : "ID01019_04",
+					"seektime" : 63250,
+					"nextid" : "ID01019_05",
+					"cues" : {
+						"64300" : {
+							"text_start" : {
+								"id" : "scn019_05",
+								"range" : [ "ID01019_04", "ID01019_05", "ID01019_06" ]
+							}
+						}
+					}
+				},
+				{
+					"id" : "ID01019_05",
+					"seektime" : 65250,
+					"nextid" : "ID01019_06",
+					"cues" : {
+						"65250" : {
+							"snd_se" : [
+								{
+									"file" : "01019_05_s.opus",
+									"action" : "start"
+								}
+							]
+						}
+					}
+				},
+				{
+					"id" : "ID01019_06",
+					"seektime" : 70250,
+					"nextid" : "ID01019_07",
+					"cues" : {
+						"70250" : {
+							"snd_se" : [
+								{
+									"file" : "01019_06_s.opus",
+									"action" : "start"
+								}
+							]
+						},
+						"70852" : {
+							"snd_voc" : [
+								{
+									"file" : "01019_06_v.opus",
+									"action" : "start"
+								}
+							]
+						},
+						"71047" : {
+							"snd_lvoc" : [
+								{
+									"file" : "breeze_slow_03.opus",
+									"action" : "stop"
+								}
+							]
+						},
+						"72000" : {
+							"text_start" : {
+								"id" : "scn019_06",
+								"range" : [ "ID01019_06", "ID01019_07" ]
+							}
+						}
+					}
+				},
+				{
+					"id" : "ID01019_07",
+					"seektime" : 73916,
+					"nextid" : "ID01020",
+					"cues" : {
+						"73916" : {
+							"snd_se" : [
+								{
+									"file" : "01019_07_s.opus",
+									"action" : "start"
+								}
+							]
+						}
+					}
+				},
+				{
+					"id" : "ID01020",
+					"seektime" : 78958,
+					"nextid" : "ID01021_01",
+					"cues" : {
+						"78971" : {
+							"snd_bgm" : [
+								{
+									"file" : "laboroom01.opus",
+									"action" : "start"
+								},
+								{
+									"file" : "challenge_room_01.opus",
+									"action" : "pause"
+								}
+							],
+							"snd_se" : [
+								{
+									"file" : "01020_s.opus",
+									"action" : "start"
+								}
+							],
+							"snd_voc" : [
+								{
+									"file" : "01020_v.opus",
+									"action" : "start"
+								}
+							],
+							"snd_lvoc" : [
+								{
+									"file" : "breeze_slow_01.opus",
+									"action" : "start",
+									"vol" : 50
+								}
+							]
+						}
+					}
+				},
+				{
+					"id" : "ID01021_01",
+					"seektime" : 81750,
+					"nextid" : "ID01021_02",
+					"cues" : {
+						"81750" : {
+							"snd_bgm" : [
+								{
+									"file" : "laboroom01.opus",
+									"action" : "stop"
+								},
+								{
+									"file" : "challenge_room_01.opus",
+									"action" : "start"
+								}
+							],
+							"snd_se" : [
+								{
+									"file" : "01021_01_s.opus",
+									"action" : "start"
+								}
+							],
+							"snd_lvoc" : [
+								{
+									"file" : "breeze_slow_01.opus",
+									"action" : "stop"
+								}
+							]
+						},
+						"82673" : {
+							"snd_voc" : [
+								{
+									"file" : "01021_01_v.opus",
+									"action" : "start"
+								}
+							]
+						}
+					}
+				},
+				{
+					"id" : "ID01021_02",
+					"seektime" : 83291,
+					"nextid" : "ID01022",
+					"cues" : {
+						"83291" : {
+							"snd_se" : [
+								{
+									"file" : "01021_02_s.opus",
+									"action" : "start"
+								}
+							]
+						},
+						"84066" : {
+							"snd_voc" : [
+								{
+									"file" : "01021_02_v.opus",
+									"action" : "start"
+								}
+							]
+						}
+					}
+				},
+				{
+					"id" : "ID01022",
+					"seektime" : 86833,
+					"nextid" : "ID01023",
+					"cues" : {
+						"86833" : {
+							"snd_se" : [
+								{
+									"file" : "01022_s.opus",
+									"action" : "start"
+								}
+							],
+							"snd_bgm" : [
+								{
+									"file" : "laboroom01.opus",
+									"action" : "start"
+								},
+								{
+									"file" : "challenge_room_01.opus",
+									"action" : "pause"
+								}
+							]
+						},
+						"86889" : {
+							"snd_voc" : [
+								{
+									"file" : "01022_v.opus",
+									"action" : "start"
+								}
+							]
+						}
+					}
+				},
+				{
+					"id" : "ID01023",
+					"seektime" : 88708,
+					"nextid" : "ID01024",
+					"cues" : {
+						"88708" : {
+							"snd_voc" : [
+								{
+									"file" : "01023_v.opus",
+									"action" : "start"
+								}
+							],
+							"snd_se" : [
+								{
+									"file" : "01023_s.opus",
+									"action" : "start"
+								}
+							],
+							"snd_bgm" : [
+								{
+									"file" : "laboroom01.opus",
+									"action" : "stop"
+								},
+								{
+									"file" : "challenge_room_01.opus",
+									"action" : "start"
+								}
+							]
+						}
+					}
+				},
+				{
+					"id" : "ID01024",
+					"seektime" : 96625,
+					"nextid" : "ID01025",
+					"cues" : {
+						"96625" : {
+							"snd_se" : [
+								{
+									"file" : "01024_s.opus",
+									"action" : "start"
+								}
+							]
+						},
+						"96689" : {
+							"snd_voc" : [
+								{
+									"file" : "01024_v.opus",
+									"action" : "start"
+								}
+							]
+						}
+					}
+				},
+				{
+					"id" : "ID01025",
+					"seektime" : 102666,
+					"nextid" : "ID01026_01",
+					"cues" : {
+						"102666" : {
+							"snd_se" : [
+								{
+									"file" : "01025_s.opus",
+									"action" : "start"
+								}
+							]
+						},
+						"103580" : {
+							"snd_voc" : [
+								{
+									"file" : "01025_v.opus",
+									"action" : "start"
+								}
+							]
+						}
+					}
+				},
+				{
+					"id" : "ID01026_01",
+					"seektime" : 104708,
+					"nextid" : "ID01026_02",
+					"cues" : {
+						"104708" : {
+							"snd_se" : [
+								{
+									"file" : "01026_01_s.opus",
+									"action" : "start"
+								}
+							]
+						},
+						"105124" : {
+							"snd_voc" : [
+								{
+									"file" : "01026_01_v.opus",
+									"action" : "start"
+								}
+							]
+						}
+					}
+				},
+				{
+					"id" : "ID01026_02",
+					"seektime" : 106750,
+					"nextid" : "ID01027_01",
+					"cues" : {
+						"106750" : {
+							"snd_se" : [
+								{
+									"file" : "01026_02_s.opus",
+									"action" : "start"
+								}
+							]
+						},
+						"106776" : {
+							"snd_voc" : [
+								{
+									"file" : "01026_02_v.opus",
+									"action" : "start"
+								}
+							]
+						}
+					}
+				},
+				{
+					"id" : "ID01027_01",
+					"seektime" : 117791,
+					"nextid" : "ID01027_02",
+					"looptime" : 2000,
+					"playback_mode" : "loop",
+					"cues" : {
+						"117791" : {
+							"snd_bgm" : [
+								{
+									"file" : "laboroom01.opus",
+									"action" : "loop"
+								},
+								{
+									"file" : "challenge_room_01.opus",
+									"action" : "stop"
+								}
+							],
+							"snd_lvoc" : [
+								{
+									"file" : "scare_breeze_01_with_tooth.opus",
+									"action" : "loop",
+									"vol" : 70
+								}
+							],
+							"text_start" : {
+								"id" : "scn027_01"
+							}
+						}
+					}
+				},
+				{
+					"id" : "ID01027_02",
+					"seektime" : 119833,
+					"nextid" : "ID01027_03",
+					"cues" : {
+						"119833" : {
+							"snd_lvoc" : [
+								{
+									"file" : "scare_breeze_01_with_tooth.opus",
+									"action" : "stop"
+								}
+							]
+						},
+						"119890" : {
+							"snd_se" : [
+								{
+									"file" : "01027_02_s.opus",
+									"action" : "start"
+								}
+							]
+						},
+						"120029" : {
+							"snd_voc" : [
+								{
+									"file" : "01027_02_v.opus",
+									"action" : "start"
+								}
+							]
+						}
+					}
+				},
+				{
+					"id" : "ID01027_03",
+					"seektime" : 121875,
+					"nextid" : "ID01027_04",
+					"cues" : {
+						"121875" : {
+							"snd_lvoc" : [
+								{
+									"file" : "breeze_slow_01.opus",
+									"action" : "loop"
+								}
+							]
+						},
+						"122317" : {
+							"snd_se" : [
+								{
+									"file" : "01027_03_s.opus",
+									"action" : "start"
+								}
+							]
+						}
+					}
+				},
+				{
+					"id" : "ID01027_04",
+					"seektime" : 127916,
+					"nextid" : "ID01028",
+					"looptime" : 2000,
+					"playback_mode" : "loop",
+					"cues" : {
+						"127916" : {
+							"snd_lvoc" : [
+								{
+									"file" : "breeze_slow_01.opus",
+									"action" : "stop"
+								},
+								{
+									"file" : "cry_scarly_01.opus",
+									"action" : "loop",
+									"vol" : 70
+								}
+							],
+							"text_start" : {
+								"id" : "scn027_04"
+							}
+						}
+					}
+				},
+				{
+					"id" : "ID01028",
+					"seektime" : 129958,
+					"nextid" : "ID01029_01",
+					"looptime" : 8000,
+					"playback_mode" : "loop",
+					"cues" : {
+						"129958" : {
+							"text_start" : {
+								"id" : "scn028"
+							}
+						}
+					}
+				},
+				{
+					"id" : "ID01029_01",
+					"seektime" : 138000,
+					"nextid" : "ID01029_02",
+					"looptime" : 2000,
+					"playback_mode" : "loop",
+					"cues" : {
+						"138000" : {
+							"snd_lvoc" : [
+								{
+									"file" : "cry_scarly_01.opus",
+									"action" : "stop"
+								},
+								{
+									"file" : "breeze_heart_01.opus",
+									"action" : "loop"
+								}
+							],
+							"text_start" : {
+								"id" : "scn029_01"
+							}
+						}
+					}
+				},
+				{
+					"id" : "ID01029_02",
+					"seektime" : 140041,
+					"nextid" : "ID01029_03",
+					"cues" : {
+						"140041" : {
+							"text_start" : {
+								"id" : "scn029_02",
+								"range" : [ "ID01029_02", "ID01029_03" ]
+							}
+						},
+						"140173" : {
+							"snd_se" : [
+								{
+									"file" : "01029_02_s.opus",
+									"action" : "start"
+								}
+							]
+						},
+						"140437" : {
+							"snd_voc" : [
+								{
+									"file" : "01029_02_v.opus",
+									"action" : "start"
+								}
+							]
+						}
+					}
+				},
+				{
+					"id" : "ID01029_03",
+					"seektime" : 142083,
+					"nextid" : "ID01031",
+					"looptime" : 2000,
+					"playback_mode" : "loop"
+				},
+				{
+					"id" : "ID01031",
+					"seektime" : 144125,
+					"nextid" : "ID01032_01",
+					"cues" : {
+						"144630" : {
+							"snd_se" : [
+								{
+									"file" : "01031_s.opus",
+									"action" : "start"
+								}
+							]
+						},
+						"144800" : {
+							"text_start" : {
+								"id" : "scn031"
+							}
+						}
+					}
+				},
+				{
+					"id" : "ID01032_01",
+					"seektime" : 149208,
+					"nextid" : "ID01032_02",
+					"looptime" : 2000,
+					"playback_mode" : "loop",
+					"cues" : {
+						"149208" : {
+							"snd_lvoc" : [
+								{
+									"file" : "cry_scarly_01.opus",
+									"action" : "loop",
+									"vol" : 70
+								},
+								{
+									"file" : "breeze_heart_01.opus",
+									"action" : "stop"
+								}
+							],
+							"text_start" : {
+								"id" : "scn032_01"
+							}
+						},
+						"149222" : {
+							"snd_voc" : [
+								{
+									"file" : "01032_01_v.opus",
+									"action" : "start"
+								}
+							]
+						}
+					}
+				},
+				{
+					"id" : "ID01032_02",
+					"seektime" : 151250,
+					"nextid" : "ID01033",
+					"cues" : {
+						"152000" : {
+							"snd_lvoc" : [
+								{
+									"file" : "cry_scarly_01.opus",
+									"action" : "stop"
+								}
+							]
+						}
+					}
+				},
+				{
+					"id" : "ID01033",
+					"seektime" : 157291,
+					"nextid" : "_next_stu",
+					"cues" : {
+						"157291" : {
+							"snd_se" : [
+								{
+									"file" : "01033_s.opus",
+									"action" : "start"
+								}
+							],
+							"snd_bgm" : [
+								{
+									"file" : "challenge_room_01.opus",
+									"action" : "loop"
+								},
+								{
+									"file" : "laboroom01.opus",
+									"action" : "stop"
+								}
+							],
+							"snd_lvoc" : [
+								{
+									"file" : "breeze_slow_01.opus",
+									"action" : "start"
+								}
+							]
+						},
+						"176041" : {
+							"snd_bgm" : [
+								{
+									"file" : "challenge_room_01.opus",
+									"action" : "stop"
+								}
+							],
+							"snd_lvoc" : [
+								{
+									"file" : "breeze_slow_01.opus",
+									"action" : "stop"
+								}
+							]
+						}
+					}
+				}
+			]
+		}
+	]
+}

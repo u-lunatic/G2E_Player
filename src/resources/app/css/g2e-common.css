@@ -1,0 +1,48 @@
+@charset "UTF-8";
+/*
+Copyright (c) 2021 Luna's Torture Room / るなてぃっく
+Released under the MIT license
+http://opensource.org/licenses/mit-license.php
+*/
+body { background: #000000FF; font-family: 'IPAex Gothic'; user-select: none; }
+
+pre { font-family: 'IPAex Gothic'; }
+
+main { margin: 0px; padding: 0px; position: fixed; width: 100vw; height: 100vh; background: #000000FF; padding-top: 0px; }
+
+#game-background-fix { background: #000000FF; position: relative; width: 1920px; height: 1080px; padding: 0px; background-size: contain; transform-origin: top left; overflow: hidden; }
+
+#game-background-scroll { background: #000000FF; position: relative; width: 1920px; height: 1080px; padding: 0px; background-size: contain; transform-origin: top left; overflow-y: scroll; overflow-x: hidden; }
+
+#game-fade-curtain { position: absolute; top: 0px; left: 0px; padding: 0; margin: 0; width: 100%; height: 100%; background-color: #000000FF; z-index: 5; }
+
+#loading-container { position: absolute; top: 0px; left: 0px; padding: 0; margin: 0; width: 100%; height: 100%; background-color: #EEEEEE; z-index: 30; /* Test */ font-size: 100px; text-align: center; line-height: 1080px; }
+
+#canvas-loading { top: 0px; left: 0px; }
+
+#non-display-dummy-container { display: none; position: absolute; }
+
+/* Font
+----------------------------------*/
+@font-face { font-family: 'IPAex Gothic'; src: url("../fonts/ipaexg.ttf"); }
+/* Custom radio button
+----------------------------------*/
+input[type='radio'] { display: none; }
+
+input[type="radio"] + label::before { content: ''; display: inline-block; background-image: url("../images/ui_parts.png"); background-position: -1957px -1677px; width: 46px; height: 46px; margin-left: -32px; margin-top: -3px; }
+
+input[type="radio"]:checked + label::before { content: ''; display: inline-block; background-image: url("../images/ui_parts.png"); background-position: -2001px -1723px; width: 46px; height: 46px; margin-left: -32px; margin-top: -3px; }
+
+/* Custom check box
+----------------------------------*/
+input[type='checkbox'] { display: none; }
+
+input[type="checkbox"] + label::before { content: ''; display: inline-block; background-image: url("../images/ui_parts.png"); background-position: -2003px -1677px; width: 45px; height: 45px; margin-left: -32px; margin-top: -2px; }
+
+input[type="checkbox"]:checked + label::before { content: ''; display: inline-block; background-image: url("../images/ui_parts.png"); background-position: -2001px -1769px; width: 45px; height: 45px; margin-left: -32px; margin-top: -2px; }
+
+/* Back Button
+----------------------------------*/
+.button_back { background: url("../images/ui_parts.png") no-repeat; background-position: -1044px -1760px; width: 217px; height: 88px; }
+
+.button_back_down { background-position: -1740px -1677px; }

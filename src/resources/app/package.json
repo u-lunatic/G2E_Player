@@ -1,0 +1,8 @@
+{
+  "name": "G2E_Player",
+  "version": "0.0.0",
+  "main": "js/g2e-main.js",
+  "license": "MIT",
+  "author": { "name": "Luna's Torture Room / るなてぃっく" },
+  "description": "G2E Player © 2021 Luna's Torture Room / るなてぃっく"
+}
