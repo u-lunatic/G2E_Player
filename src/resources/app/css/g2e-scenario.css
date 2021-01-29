@@ -16,7 +16,7 @@ body { margin: 0px; padding: 0px; position: fixed; }
   25% { transform: translateX(0px) scale(1); filter: blur(0px); }
   75% { transform: translateX(0px) scale(1); filter: blur(0px); opacity: 1.0; }
   100% { transform: translateX(160px) scale(1.08); filter: blur(4px); opacity: 0.0; } }
-.textscn_container { display: none; width: 1362px; height: 375px; position: absolute; top: 725px; left: 240px; padding: 0px; margin: 0px; text-shadow: 2px 2px 6px #000000, 2px  2px 1px #303030, -2px  2px 1px #303030, 2px -2px 1px #303030, -2px -2px 1px #303030, 2px  0px 1px #303030, 0px  2px 1px #303030, -2px  0px 1px #303030, 0px -2px 1px #303030; }
+.textscn_container { display: none; width: 1362px; height: 375px; position: absolute; top: 718px; left: 240px; padding: 0px; margin: 0px; text-shadow: 2px 2px 6px #000000, 2px  2px 1px #303030, -2px  2px 1px #303030, 2px -2px 1px #303030, -2px -2px 1px #303030, 2px  0px 1px #303030, 0px  2px 1px #303030, -2px  0px 1px #303030, 0px -2px 1px #303030; }
 
 .textscn_bg { position: absolute; background: url(../images/ui_parts.png) no-repeat; background-position: 0px -1197px; width: 1362px; height: 375px; top: 0px; left: 0px; opacity: 0.25; }
 

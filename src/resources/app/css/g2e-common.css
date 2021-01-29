@@ -10,7 +10,7 @@ pre { font-family: 'IPAex Gothic'; }
 
 main { margin: 0px; padding: 0px; position: fixed; width: 100vw; height: 100vh; background: #000000FF; padding-top: 0px; }
 
-#game-background-fix { background: #000000FF; position: relative; width: 1920px; height: 1080px; padding: 0px; background-size: contain; transform-origin: top left; overflow: hidden; }
+#game-background-fix { background: #000000FF; position: relative; width: 1920px; height: 1080px; padding: 0px; background-size: contain; transform-origin: top left; }
 
 #game-background-scroll { background: #000000FF; position: relative; width: 1920px; height: 1080px; padding: 0px; background-size: contain; transform-origin: top left; overflow-y: scroll; overflow-x: hidden; }
 
